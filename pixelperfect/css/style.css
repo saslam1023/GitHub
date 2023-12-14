@@ -1,0 +1,70 @@
+:root {
+    --fuschia: #dc14ad;
+    --lightblue: #14b4dc;
+    --green: #67dc14;
+    --crimson: crimson;
+    --gold: #f3a70e;
+    --black: #000;
+    --white: #fff;
+
+}
+
+* {
+    margin: 0;
+    font-family: 'Silkscreen', sans-serif;
+}
+
+header {
+    background-color: var(--white);
+    padding: 0;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    display: block;
+}
+
+.header {
+    background-color: var(--white);
+    padding: 30px;
+}
+
+h1 {
+    border-bottom: 1px solid black;
+}
+
+.box {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    padding: 15px;
+}
+
+.pink {
+    background-color: var(--fuschia);
+}
+
+.blue {
+    background-color: var(--lightblue);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.gold {
+    background-color: var(--gold);
+}
+
+.black {
+    background-color: var(--black);
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.main {
+    padding-top: 200px
+}
