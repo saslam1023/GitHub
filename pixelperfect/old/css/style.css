@@ -1,0 +1,130 @@
+:root {
+    --fuschia: #dc14ad;
+    --lightblue: #14b4dc;
+    --green: #67dc14;
+    --crimson: crimson;
+    --gold: #f3a70e;
+    --black: #000;
+    --white: #fff;
+
+
+    --electricBlue: #00BFFF;
+    --limeZest: #8CC84B;
+    --magentaBurst: #FF00FF;
+    --sunsetOrange: #FF4500;
+    --goldenYellow: #FFD700;
+
+    /* */
+    --EcoElegance: #88B04B;
+    --Accent1: #F9EBB2;
+    --Accent2: #7C6E58;
+
+    --TechHarmony: #0067A5;
+    --orange: #F28D35;
+    --steelgray: #5E738B;
+
+    --NatureEmbrace: #D48E5A;
+    --slategray: #52616B;
+    --olivegreen: #A8BF78;
+
+    /* innovative and adaptable */
+    --CelestialBlue: #4D6CBF;
+    --RadiantOrchid: #B041FF;
+    --SerenityGreen: #6CCD9B;
+    --HarmonyCoral: #FF6F61;
+    --LuminaryGold: #FFD23F;
+
+    /* innovative and versatile */
+    --LuminescentLilac: #AF74E8;
+    --FusionCoral: #FF706B;
+    --ZenithTeal: #00B8A9;
+    --PulsePink: #FF5E78;
+    --EtherealGold: #FFD166;
+
+    /* fresh and versatile */
+    QuantumViolet: #6C3E92;
+    SynthwaveTurquoise: #00F5A0;
+    NebulaGold: #FFD300;
+    MysticCoral: #FF4E50;
+    EtherBlue: #4A90E2;
+
+    /* accessible */
+    InclusiveBlue: #0072C6;
+    UniversalGreen: #4CAF50;
+    AccessibleGray: #808080;
+    EqualityPurple: #9B59B6;
+    EmpathyTeal: #008080;
+
+    /* ux design */
+    User-FriendlyBlue: #3498DB;
+    InteractionGreen: #2ECC71;
+    ExperienceYellow: #FFD700;
+    CleanWhite: #FFFFFF;
+    IntuitiveGray: #A6A6A6;
+
+
+
+
+}
+
+* {
+    margin: 0;
+    font-family: 'Silkscreen', sans-serif;
+}
+
+header {
+    background-color: var(--white);
+    padding: 0;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    display: block;
+}
+
+.header {
+    background-color: var(--white);
+    padding: 30px;
+}
+
+h1 {
+    border-bottom: 1px solid black;
+}
+
+.box {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    aspect-ratio: 1/1;
+    width: 100px;
+}
+
+.pink {
+    background-color: var(--fuschia);
+}
+
+.blue {
+    background-color: var(--lightblue);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.gold {
+    background-color: var(--gold);
+}
+
+.black {
+    background-color: var(--black);
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.mmain {
+    padding-top: 200px
+}
