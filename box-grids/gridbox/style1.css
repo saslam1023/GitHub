@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    height: 100vh;
+}
+
+.box {
+    background-color: #3498db;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid black;
+}
+
+.box:active {
+    grid-column: span 8;
+    transform: scaleX(1.2);
+    transition: all 0.5s ease-in-out;
+}
