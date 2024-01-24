@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Dubai;
+  src: url(DubaiW23-Regular.woff);
+}
+
+@font-face {
+  font-family: Dubai;
+  src: url(DubaiW23-Bold.woff);
+  weight: bold;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dubai', sans-serif;
+}
+
+
+/* Define styles for each section */
+/* Example styles for header */
+header {
+  height: 100vh;
+  background: url('header-background.jpg') center/cover fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-align: center;
+}
+
+/* Example styles for CTA button */
+.cta-button {
+  background-color: #001F3F;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Add styles for other sections as needed */
