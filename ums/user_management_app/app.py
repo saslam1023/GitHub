@@ -1,11 +1,26 @@
 from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 from bson.objectid import ObjectId
+from dotenv import load_dotenv
+import os
 
-app = Flask(__name__)
-client = MongoClient('mongodb+srv://saslam1023:2wWENVahazgLR1Zb@cluster0.snxyuyr.mongodb.net/')
-db = client['user']
+# Load environment variables from .env file
+load_dotenv()
 
+# Initialize Flask app
+app = Flask(__name__, template_folder='templates')
+
+# Retrieve MongoDB connection string from environment variables
+MONGODB_URI = os.getenv('MONGODB_URI')
+
+# Connect to MongoDB
+client = MongoClient(MONGODB_URI)
+#db = client.get_default_database()
+#users = db['user']
+db = client['users']
+
+
+# Define routes
 @app.route('/')
 def index():
     users = db.user.find()
@@ -14,15 +29,15 @@ def index():
 @app.route('/add_user', methods=['POST'])
 def add_user():
     name = request.form['name']
-    age = request.form['age']
-    db.user.insert_one({'name': name, 'age': age})
+    email = request.form['email']
+    db.user.insert_one({'name': name, 'email': email})
     return redirect(url_for('index'))
 
 @app.route('/modify_user/<user_id>', methods=['POST'])
 def modify_user(user_id):
     new_name = request.form['name']
-    new_age = request.form['age']
-    db.user.update_one({'_id': ObjectId(user_id)}, {'$set': {'name': new_name, 'age': new_age}})
+    new_email = request.form['email']
+    db.user.update_one({'_id': ObjectId(user_id)}, {'$set': {'name': new_name, 'email': new_email}})
     return redirect(url_for('index'))
 
 @app.route('/delete_user/<user_id>', methods=['POST'])
@@ -32,3 +47,4 @@ def delete_user(user_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
