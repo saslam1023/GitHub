@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    height: 100vh;
+}
+
+.box {
+    flex: 1;
+    background-color: #e74c3c;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.box:active {
+    flex: 8;
+    transition: all 0.5s ease-in-out;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        :root {
+            --fuschia: #dc14ad;
+            --lightblue: #14b4dc;
+            --green: #67dc14;
+            --crimson: crimson;
+            --gold: #f3a70e;
+            --black: #000;
+            --white: #fff;
+            --highlight-color: rgb(255, 240, 0);
+
+            body {
+                margin: 0;
+                overflow: hidden;
+            }
+
+            /*     .container {
+                display: grid;
+                grid-template-columns: repeat(8, 1fr);
+                gap: 0px;
+                /* Center vertically and horizontally 
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* zbox
+        .container {
+            width: 200%;
+            height: 200%;
+            border: 1px solid red;
+            margin: 100px -100px;
+            white-space: nowrap;
+            overflow: auto;
+            display: block;
+        }
+        
+
+
+            .expandable-box {
+                width: 100%;
+                aspect-ratio: 1;
+                color: black;
+                border: 1px solid black;
+                position: relative;
+                left: 0;
+                cursor: pointer;
+                transition: width 1s ease-in-out, height 1s 1s ease-in-out;
+                z-index: 1;
+                float: left;
+            }
+/*
+            /*
+            .expandable-box {
+                width: 100%;
+                left: 0;
+                cursor: pointer;
+                transition: width 1s ease-in-out, height 1s 1s ease-in-out;
+                grid-column: span 1;
+                aspect-ratio: 1;
+                border: 1px solid black;
+                padding: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }*/
+
+            .expanded {
+                width: 100vw;
+                height: 100vh;
+                background-color: red;
+                z-index: 1000;
+                grid-column: span 8;
+                left: 0;
+                top: 0;
+                aspect-ratio: auto;
+                /* transform: translate(-50%, -50%);*/
+            }
+
+            /* Colours  */
+
+            .pink {
+                background-color: var(--fuschia);
+            }
+
+            .pinkt {
+                color: var(--pink);
+            }
+
+            .blue {
+                background-color: var(--lightblue);
+            }
+
+            .bluet {
+                color: var(--blue);
+            }
+
+            .green {
+                background-color: var(--green);
+            }
+
+            .greent {
+                color: var(--green);
+            }
+
+            .gold {
+                background-color: var(--gold);
+            }
+
+            .goldt {
+                color: var(--gold);
+            }
+
+            .black {
+                background-color: var(--black);
+            }
+
+            .blackt {
+                color: var(--black);
+            }
+
+            .whitet {
+                color: var(--white);
+            }
+
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .expanded-box {
+                flex: 0 0 calc(12.5% - 2px);
+                /* 12.5% to have 8 boxes in a row, minus border */
+                width: calc(100% / 8 - 2px);
+                /* Dynamic width for 8 boxes in a row, minus border */
+                aspect-ratio: 1;
+
+                position: relative;
+                cursor: pointer;
+                transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+                overflow: hidden;
+                /* Hide any potential overflow content */
+                border: 1px solid #000;
+                /* Black border */
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                transform-origin: center center;
+                /* Set initial transform origin to center */
+            }
+    </style>
+    <title>working box expanding code</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="expandable-box pink">1</div>
+        <div class="expandable-box white">2</div>
+        <div class="expandable-box blue">3</div>
+        <div class="expandable-box green">4</div>
+        <div class="expandable-box white">5</div>
+        <div class="expandable-box black">6</div>
+        <div class="expandable-box gold">7</div>
+        <div class="expandable-box white">8</div>
+    </div>
+    <div>
+        <div class="expandable-box pink">9</div>
+        <div class="expandable-box green">10</div>
+        <div class="expandable-box white">11</div>
+        <div class="expandable-box black">12</div>
+        <div class="expandable-box pink">13</div>
+        <div class="expandable-box white">14</div>
+        <div class="expandable-box blue">15</div>
+        <div class="expandable-box green">16</div>
+        <div class="expandable-box white">17</div>
+        <div class="expandable-box black">18</div>
+        <div class="expandable-box gold">19</div>
+        <div class="expandable-box white">20</div>
+        <div class="expandable-box pink">21</div>
+        <div class="expandable-box green">22</div>
+        <div class="expandable-box white">23</div>
+        <div class="expandable-box black">24</div>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".expandable-box").click(function () {
+                // Toggle the 'expanded' class to switch between states
+                $(this).toggleClass("expanded");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

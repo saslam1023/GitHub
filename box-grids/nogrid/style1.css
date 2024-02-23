@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12.5%;
+    height: 100%;
+    background-color: #3498db;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.box:active {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
