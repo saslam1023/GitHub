@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>Home</h1>
+{% for post in posts %}
+<article>
+    <h2>{{ post.title }}</h2>
+    <p>Posted on {{ post.date_posted.strftime('%Y-%m-%d') }}</p>
+    <p>{{ post.content }}</p>
+</article>
+{% endfor %}
+{% endblock %}

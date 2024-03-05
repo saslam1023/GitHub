@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>cube Screen</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .cube {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotateCube 5s linear infinite;
+        }
+
+        .cube .face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 0, 0, 0.5);
+            border: 1px solid #000;
+        }
+
+        @keyframes rotateCube {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .face1 {
+            transform: rotateY(0deg) translateZ(50px);
+        }
+
+        .face2 {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+
+        .face3 {
+            transform: rotateY(180deg) translateZ(50px);
+        }
+
+        .face4 {
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+
+        .face5 {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+
+        .face6 {
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cube">
+        <div class="face face1"></div>
+        <div class="face face2"></div>
+        <div class="face face3"></div>
+        <div class="face face4"></div>
+        <div class="face face5"></div>
+        <div class="face face6"></div>
+    </div>
+</body>
+
+</html>

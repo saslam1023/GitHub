@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .box {
+            flex: 0 0 calc(12.5% - 2px);
+            /* 12.5% to have 8 boxes in a row, minus border */
+            width: calc(100% / 8 - 2px);
+            /* Dynamic width for 8 boxes in a row, minus border */
+            height: 200px;
+            /* Set the height as needed */
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            overflow: hidden;
+            /* Hide any potential overflow content */
+            border: 1px solid #000;
+            /* Black border */
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transform-origin: center center;
+            /* Set initial transform origin to center */
+        }
+
+        .box:nth-child(1) {
+            background-color: #3498db;
+        }
+
+        .box:nth-child(2) {
+            background-color: #e74c3c;
+        }
+
+        .box:nth-child(3) {
+            background-color: #2ecc71;
+        }
+
+        .box:nth-child(4) {
+            background-color: #f39c12;
+        }
+
+        .box:nth-child(5) {
+            background-color: #9b59b6;
+        }
+
+        .box:nth-child(6) {
+            background-color: #1abc9c;
+        }
+
+        .box:nth-child(7) {
+            background-color: #e67e22;
+        }
+
+        .box:nth-child(8) {
+            background-color: #34495e;
+        }
+
+        .box.zoomed {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            transform: scale(1);
+        }
+
+        body.zoomed {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Row 1 -->
+        <div class="box" onclick="toggleZoom(this)"></div>
+        <div class="box" onclick="toggleZoom(this)"></div>
+        <div class="box" onclick="toggleZoom(this)"></div>
+        <div class="box" onclick="toggleZoom(this)"></div>
+        <div class="box" onclick="toggleZoom(this)"></div>
+        <div class="box" onclick="toggleZoom(this)"></div>
+        <div class="box" onclick="toggleZoom(this)"></div>
+        <div class="box" onclick="toggleZoom(this)"></div>
+
+        <!-- Add more rows as needed -->
+        <!-- Row 2
+    <div class="box" onclick="toggleZoom(this)"></div>
+    <div class="box" onclick="toggleZoom(this)"></div>
+    <div class="box" onclick="toggleZoom(this)"></div>
+    <div class="box" onclick="toggleZoom(this)"></div>
+    <div class="box" onclick="toggleZoom(this)"></div>
+    <div class="box" onclick="toggleZoom(this)"></div>
+    <div class="box" onclick="toggleZoom(this)"></div>
+    <div class="box" onclick="toggleZoom(this)"></div>
+    -->
+    </div>
+
+    <script>
+        function toggleZoom(box) {
+            var body = document.body;
+
+            box.classList.toggle('zoomed');
+            body.classList.toggle('zoomed');
+
+            if (box.classList.contains('zoomed')) {
+                // Prevent clicking on other boxes when one is zoomed in
+                document.querySelectorAll('.box').forEach(function (otherBox) {
+                    if (otherBox !== box) {
+                        otherBox.style.pointerEvents = 'none';
+                    }
+                });
+
+                // Set scale to zoom in
+                box.style.transform = 'scale(' + Math.min(window.innerWidth / box.offsetWidth, window.innerHeight / box.offsetHeight) + ')';
+            } else {
+                // Reset pointer events after transition
+                document.querySelectorAll('.box').forEach(function (otherBox) {
+                    otherBox.style.pointerEvents = 'auto';
+                });
+
+                // Reset scale to zoom out
+                box.style.transform = 'scale(1)';
+            }
+        }
+    </script>
+</body>
+
+</html>

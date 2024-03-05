@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Updates</title>
+</head>
+
+<body>
+
+    This works.
+
+    <label for="inputText1">Input Text 1:</label>
+    <input type="text" id="inputText1" oninput="updateElement('outputElement1', this.value)">
+
+    <br>
+
+    <label for="inputText2">Input Text 2:</label>
+    <input type="text" id="inputText2" oninput="updateElement('outputElement2', this.value)">
+
+    <br>
+
+    <label for="textarea">Textarea:</label>
+    <textarea id="textarea" oninput="updateElement('outputElement3', this.value)"></textarea>
+
+    <br>
+
+    <label for="select">Select:</label>
+    <select id="select" onchange="updateElement('outputElement4', this.value)">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+
+    <br>
+
+    <input type="checkbox" id="checkbox" onchange="updateElement('outputElement5', this.checked)">
+    <label for="checkbox">Checkbox</label>
+
+    <br>
+
+    <div id="outputElement1">Content for Input Text 1 will be updated here</div>
+    <div id="outputElement2">Content for Input Text 2 will be updated here</div>
+    <div id="outputElement3">Content for Textarea will be updated here</div>
+    <div id="outputElement4">Content for Select will be updated here</div>
+    <div id="outputElement5">Content for Checkbox will be updated here</div>
+
+    <script>
+        function updateElement(outputId, value) {
+            document.getElementById(outputId).innerText = value;
+        }
+    </script>
+
+</body>
+
+</html>

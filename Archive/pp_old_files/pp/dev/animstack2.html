@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Animation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,300&family=Silkscreen:wght@400;700&display=swap');
+
+        :root {
+            --fuchsia: #dc14ad;
+            --lightblue: #14b4dc;
+            --green: #67dc14;
+            --crimson: crimson;
+            --gold: #f3a70e;
+            --black: #000;
+            --white: #fff;
+            --highlight-color: rgb(255, 240, 0);
+            --gray: #777;
+            --lightgray: #d1d1d1;
+        }
+
+        .highlight-color {
+            background-color: var(--highlight-color);
+        }
+
+        h3 {
+            font-size: 16px;
+            font-family: 'DM Mono', sans-serif;
+            font-style: italic;
+            color: black;
+            padding: 10px 0;
+
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            background-color: var(--gray);
+            color: white;
+        }
+
+        #splash-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 10px);
+            gap: 0;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transform-origin: center center;
+            animation: scaleRotate 3s cubic-bezier(0.25, 0.1, 0.25, 1) 2s forwards;
+            background-color: #000;
+        }
+
+        .pixel {
+            width: 10px;
+            height: 10px;
+            background-color: transparent;
+            opacity: 0;
+            animation: ppfadeIn 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+        }
+
+        @keyframes ppfadeOut {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleRotate {
+            from {
+                transform: scale(1) rotate(0deg);
+            }
+
+            to {
+                transform: scale(20) rotate(270deg);
+            }
+        }
+
+        /* Fade out animation */
+        @keyframes ppfadeIn {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        .ppfadeOut {
+            animation: ppfadeOut 20s linear;
+        }
+
+        .pp-text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+        }
+
+        .pp-text {
+            font-size: 64px;
+            color: white;
+            background-color: black;
+            font-family: 'Silkscreen', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="splash-container"></div>
+    <div class="pp-text-container">
+        <div class="pp-text">Pixel Perfect<h3 class="highlight-color">The Portfolio Site of Smeena</h3>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById('splash-container');
+            const textcontainer = document.getElementById('pp-text-container');
+            const text = document.getElementById('pp-text');
+            const numPixelsWidth = Math.floor(window.innerWidth / 10); // Number of pixels horizontally
+            const numPixelsHeight = Math.ceil(window.innerHeight / 10); // Number of pixels vertically (rounded up)
+            const numPixels = numPixelsWidth * numPixelsHeight;
+            const colors = ['#dc14ad', 'black', '#14b4dc', '#f3a70e', '#67dc14', 'black', 'white']; // Remove white from colors
+
+            // Create pixel elements and add them to the container
+            for (let i = 0; i < numPixels; i++) {
+                const pixel = document.createElement('div');
+                pixel.classList.add('pixel');
+                container.appendChild(pixel);
+
+                // Randomize color for each pixel
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                pixel.style.backgroundColor = randomColor;
+
+                // Set a delay for appearance
+                const delay = Math.random() * 10; // Random delay between 0 and 10 seconds
+                pixel.style.animationDelay = (delay + 1) + 's'; // Add 3 seconds delay
+            }
+
+            // Update grid-template-columns to match the number of pixels horizontally
+            container.style.gridTemplateColumns = `repeat(${numPixelsWidth}, 10px)`;
+            container.style.gridTemplateRows = `repeat(${numPixelsHeight}, 10px)`;
+
+
+            // Hide the container and text after 4 seconds (2 seconds after the animation completes)
+            setTimeout(function () {
+                container.classList.add('ppfadeOut');
+                setTimeout(function () {
+                    container.style.display = 'none';
+                    document.querySelector('.pp-text-container').style.display = 'none';
+                }, 4000); // Adjust duration of fade out animation
+            }, 6000); // Adjust delay before hiding
+        });
+    </script>
+</body>
+
+</html>

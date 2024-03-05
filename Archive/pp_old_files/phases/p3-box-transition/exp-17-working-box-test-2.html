@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --fuschia: #dc14ad;
+            --lightblue: #14b4dc;
+            --green: #67dc14;
+            --crimson: crimson;
+            --gold: #f3a70e;
+            --black: #000;
+            --white: #fff;
+            --highlight-color: rgb(255, 240, 0);
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Colours  */
+
+        .pink {
+            background-color: var(--fuschia);
+        }
+
+        .pinkt {
+            color: var(--pink);
+        }
+
+        .blue {
+            background-color: var(--lightblue);
+        }
+
+        .bluet {
+            color: var(--blue);
+        }
+
+        .green {
+            background-color: var(--green);
+        }
+
+        .greent {
+            color: var(--green);
+        }
+
+        .gold {
+            background-color: var(--gold);
+        }
+
+        .goldt {
+            color: var(--gold);
+        }
+
+        .black {
+            background-color: var(--black);
+        }
+
+        .blackt {
+            color: var(--black);
+        }
+
+        .whitet {
+            color: var(--white);
+        }
+
+
+        .sitecontainer {
+            border: 1px solid red;
+            background-color: cyan;
+            /* width: 300%;
+            height: 300%;
+            margin: -50% -50%;
+            top: -50%;
+            left: -50%;*/
+        }
+
+        .container {
+            display: block;
+            text-align: center;
+            border: 1px solid blue;
+            background-color: yellow;
+            /* margin: 0 -50%;*/
+            margin: 0;
+            width: 100%;
+            cursor: pointer;
+            transition: transform 2s ease-in-out, height 1s 2s ease-in-out, width 1s 1s ease-in-out;
+
+        }
+
+        .innercontainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 1px solid rgb(0, 255, 72);
+            /*   width: 32.5%;*/
+            width: 100%;
+            align-items: center;
+            transition: width 0s ease-in-out, height 0s 0s ease-in-out;
+        }
+
+
+        .expandable-box {
+            /*  width: 200px;
+                height: 200px;
+                 background-color: #3498db;
+                position: absolute;
+                /*   top: 50%;
+                left: 50%;
+                flex: 0 0 calc(12.5% - 2px);*/
+            /* 12.5% to have 8 boxes in a row, minus border 
+                width: calc(100% / 8 - 2px);*/
+            width: 12.5%;
+            /*height: 150px;*/
+            aspect-ratio: 1;
+            /* Dynamic width for 8 boxes in a row, minus border */
+
+            /* transform: translate(0%, 0%);*/
+            cursor: pointer;
+            transition: width 2s 2s ease-in-out, aspect-ratio 1s 2s ease-in-out;
+
+        }
+
+        .expanded {
+            top: 0;
+            width: 100vw;
+            aspect-ratio: 4 / 1;
+
+
+        }
+
+
+        /* .expanded2 {
+            z-index: 10;
+            aspect-ratio: none;
+            /* top: -50%;
+            left: -50%;
+            margin: auto;
+            border: 10px solid black;
+            width: 300%;
+            background-color: brown;
+            align-items: center;
+            flex-flow: nowrap;
+        }*/
+        .expanded2 {
+            /*top: 0;*/
+
+            background-color: #f3a70e;
+            /*  margin-left: 1%;*/
+            width: 200vw;
+            height: 50%;
+            aspect-ratio: 8 / 1;
+            /* margin-left: -100%;
+            /*
+             height: 50px;
+            top: 0;
+            left: -50%;
+            transform: translate(-50%, -50%);
+            */
+            transform: translate(0%, 0%);
+
+        }
+
+
+        .full-width {
+            width: 100%;
+        }
+    </style>
+    <title>working box expanding code</title>
+</head>
+
+<body>
+    <div class="sitecontainer">
+        <!--test-
+        <div class="container">
+            <div class="innercontainer">
+                <div class="expandable-box pink">1</div>
+            </div>
+            <div class="innercontainer">
+                <div class="expandable-box black">2</div>
+            </div>
+            <div class="innercontainer">
+                <div class="expandable-box blue">3</div>
+            </div>
+            <div class="innercontainer">
+                <div class="expandable-box green">4</div>
+            </div>
+            <div class="innercontainer">
+                <div class="expandable-box pink">5</div>
+            </div>
+            <div class="innercontainer">
+                <div class="expandable-box black">6</div>
+            </div>
+            <div class="innercontainer">
+                <div class="expandable-box gold">7</div>
+            </div>
+            <div class="innercontainer">
+                <div class="expandable-box blue">8</div>
+            </div>
+        </div>-->
+        <div class="container">
+            <div class="innercontainer">
+                <div class="expandable-box pink">1</div>
+                <div class="expandable-box black">2</div>
+                <div class="expandable-box blue">3</div>
+                <div class="expandable-box green">4</div>
+                <div class="expandable-box pink">5</div>
+                <div class="expandable-box black">6</div>
+                <div class="expandable-box gold">7</div>
+                <div class="expandable-box blue">8</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="innercontainer">
+                <div class="expandable-box pink">1</div>
+                <div class="expandable-box black">2</div>
+                <div class="expandable-box blue">3</div>
+                <div class="expandable-box green">4</div>
+                <div class="expandable-box pink">5</div>
+                <div class="expandable-box black">6</div>
+                <div class="expandable-box gold">7</div>
+                <div class="expandable-box blue">8</div>
+            </div>
+        </div>
+    </div>
+    <!--    <div class="expandable-box"></div>-->
+
+    <script>
+        $(document).ready(function () {
+            $(".expandable-box").click(function () {
+                $(".container").toggleClass("expanded2");
+                $(this).toggleClass("expanded");
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

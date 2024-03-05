@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #zoomBox {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+
+        #zoomBox.zoomed {
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            transform: none;
+        }
+
+        body.zoomed {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="zoomBox" onclick="toggleZoom()">
+        <h1>Thhis heading</h1>
+        <h2>subheading</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque! Itaque accusantium sequi at,
+            facere id quas necessitatibus tenetur ipsam suscipit deleniti error fugiat eaque dolore dolorem, repellat et
+            voluptatem dicta possimus harum libero tempora? Dolorem, ab. Accusantium iusto ullam eum, nam amet
+            praesentium consequuntur. A, error vitae modi ea, eius deleniti maxime voluptate numquam repellat libero,
+            quibusdam necessitatibus? Quod sunt corporis dolorum totam esse doloribus magnam architecto, aperiam
+            suscipit similique illo quam rerum ratione vitae eius! Quas aperiam minima pariatur maiores error odio qui,
+            ducimus placeat esse fugit, officiis et. Eligendi nemo quos eveniet excepturi, repellendus quidem aliquid
+            omnis.</p>
+    </div>
+
+    <script>
+        function toggleZoom() {
+            var body = document.body;
+            var zoomBox = document.getElementById('zoomBox');
+            zoomBox.classList.toggle('zoomed');
+            body.classList.toggle('zoomed');
+        }
+    </script>
+</body>
+
+</html>

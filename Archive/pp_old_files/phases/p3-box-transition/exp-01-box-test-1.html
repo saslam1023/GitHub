@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100vw;
+            /* Make the container fill the screen width */
+            justify-content: center;
+            /* Center the container horizontally */
+        }
+
+        .box {
+            position: relative;
+            flex: 0 0 calc(12.5% - 20px);
+            /* 12.5% to have 8 boxes in a row, minus margin */
+            box-sizing: border-box;
+            margin: 10px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 18px;
+            aspect-ratio: 1/1;
+            /* Set the aspect ratio to 1:1 */
+            overflow: hidden;
+            /* Hide overflow content */
+            transition: all 0.5s ease-in-out;
+            /* Transition for all properties */
+        }
+
+        .overflow-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: none;
+            overflow: auto;
+        }
+
+        .hidden-content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: none;
+            overflow: auto;
+            z-index: 2;
+            /* Higher z-index to overlay the grid */
+        }
+
+        .box.expanded {
+            width: 100% !important;
+            border: 2px solid red;
+            z-index: 1;
+            /* Ensures the expanded box is above other boxes */
+        }
+
+        .box.expanded .overflow-content {
+            display: block;
+            /* Show the overflow content when box is expanded */
+        }
+
+        .box.expanded .hidden-content {
+            display: block;
+            /* Show the hidden content overlay when box is expanded */
+        }
+    </style>
+    <title>Responsive Box Layout</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Row 1 -->
+        <div class="box" id="box1">
+            Box 1<br>Additional content
+            <div class="overflow-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, totam
+                harum facilis quis consequuntur suscipit esse praesentium atque dignissimos labore fuga maiores,
+                sapiente ratione aliquam rem? Libero commodi at soluta praesentium vel voluptatibus ratione molestias
+                perspiciatis recusandae alias, suscipit ipsam. Sequi nisi repudiandae voluptates sunt vitae numquam et
+                sit quis, iusto amet possimus soluta quaerat unde enim consequuntur natus? Fuga libero assumenda ullam
+                reprehenderit facere autem molestias, aut at excepturi sapiente explicabo beatae nostrum unde quis
+                dolorem. Tenetur officiis fugiat, cum temporibus molestias modi sint, natus illum fuga perferendis error
+                odio neque excepturi quam? Pariatur placeat odit exercitationem molestias expedita?Additional content
+            </div>
+            <div class="hidden-content">Hidden content overlay Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Incidunt excepturi iure, quos recusandae laudantium blanditiis numquam alias modi commodi nihil dolore
+                a, tempora ratione! Ab iure esse odit qui consectetur sapiente suscipit quo unde dolores laborum
+                repellat animi est asperiores voluptatem blanditiis quasi autem, at enim tempore dolor harum minima?
+            </div>
+        </div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4 </div>
+        <div class="box" id="box5">Box 5</div>
+        <div class="box" id="box6">Box 6</div>
+        <div class="box" id="box7">Box 7</div>
+        <div class="box" id="box8">Box 8</div>
+
+        <!-- Row 2 (add more rows as needed) -->
+        <!-- <div class="box" id="box9">Box 9</div>
+        <div class="box" id="box10">Box 10</div>
+        <div class="box" id="box11">Box 11</div>
+        <div class="box" id="box12">Box 12</div>
+        <div class="box" id="box13">Box 13</div>
+        <div class="box" id="box14">Box 14</div>
+        <div class="box" id="box15">Box 15</div>
+        <div class="box" id="box16">Box 16</div> -->
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.box').click(function (event) {
+                event.stopPropagation();
+                $('.box').not(this).removeClass('expanded');
+                $(this).toggleClass('expanded');
+
+                // Determine the position of the clicked box
+                var boxIndex = $(this).index();
+                var boxesCount = $('.box').length;
+                var isLeftmost = boxIndex === 0;
+                var isRightmost = boxIndex === boxesCount - 1;
+
+                // Apply the appropriate width expansion
+                if (isLeftmost && !isRightmost) {
+                    $(this).css({ width: '100%', left: 0, right: 'auto' });
+                } else if (!isLeftmost && !isRightmost) {
+                    $(this).css({ width: '100%', left: 0, right: 0 });
+                } else if (!isLeftmost && isRightmost) {
+                    $(this).css({ width: '100%', left: 'auto', right: 0 });
+                }
+            });
+
+            $(document).click(function () {
+                $('.box').removeClass('expanded');
+            });
+        });
+    </script>
+</body>
+
+</html>

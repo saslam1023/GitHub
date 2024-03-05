@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/dash-styleview.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/process-data.js" defer></script>
+
+
+    <title>Welcome to: saslam1023.github.io: Dashboard</title>
+</head>
+
+<body>
+    <!-- heading -->
+
+    <main>
+        <div class="table-container">
+
+
+            <!-- form -->
+            <section class="form-wrapper">
+                <h1 class="pad20 ">Dashboard</h1>
+                <input class="datebox whitet" type="text" id="date" name="date" readonly />
+                <script>getDate();</script>
+                <form id="editForm" name="articleform" action="js/process.php" method="POST"
+                    enctype="multipart/form-data">
+                    <input type="hidden" name="check_submit" value="1" />
+
+                    <!-- Site basics -->
+                    <h2 class="pink whitet pad20">Site basics</h2>
+
+                    <div>
+                        <div class="label required"><label for="h1">Site Title (h1)</label>
+                            <input type="text" placeholder="Site Title" id="h1" name="h1" tabindex="1" max="400"
+                                autocapitalize="sentences" required /><br />
+                        </div>
+                        <div class="label required"><label for="h2">Subtitle (h2)</label>
+                            <input type="text" name="h2" id="h2" tabindex="2" placeholder="Subtitle"
+                                autocapitalize="sentences" required /><br />
+                        </div>
+                        <div class="label"><label for="h3">Subheading (h3)</label>
+                            <input type="text" name="h3" id="h3" tabindex="3" placeholder="Subheading"
+                                autocapitalize="sentences" /><br />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="label"><label for="icon">Icon</label>
+                            <input type="text" name="icon" id="icon" tabindex="4" placeholder="e.g /icon.png" /><br />
+                        </div>
+                        <div class="label"><label for="boxlink">Box Link</label>
+                            <input type="text" placeholder="Box Link" name="boxlink" id="boxlink" tabindex="8" /><br />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="label required"><label for="boxcontent">Box Content</label>
+                            <textarea type="text" placeholder="Box Content" name="boxcontent" id="boxcontent"
+                                tabindex="9" required></textarea><br />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="label"><label for="imagefile">Image</label>
+                            <img width="50" height="60" id="imagefile" src="#" alt="Image placeholder" />
+                            <input placeholder="e.g /placeholder.jpg" type="text" name="imagefile" tabindex="5"
+                                id="imagefile" /><br />
+                        </div>
+                    </div>
+
+                    <!-- Item Section -->
+                    <h2 class="blue whitet pad20">Item</h2>
+
+                    <div>
+                        <div class="label"><label for="itemHeading">Item Heading</label>
+                            <input type="text" id="itemHeading" name="item[heading]" /><br />
+                        </div>
+                        <div class="label"><label for="itemSubheading">Item Subheading</label>
+                            <input type="text" id="itemSubheading" name="item[subheading]" /><br />
+                        </div>
+                        <div class="label"><label for="date">Item Date</label>
+                            <input type="text" id="itemDate" name="item[date]" /><br />
+                        </div>
+                        <div class="label"><label for="itemImage">Item Image</label>
+                            <input type="text" id="itemImage" name="item[image]" /><br />
+                        </div>
+                        <div class="label"><label for="itemContent">Item Content</label>
+                            <textarea id="itemContent" name="item[content]"></textarea><br />
+                        </div>
+                        <div class="label"><label for="colour">Item Colour</label>
+                            <select id="itemColour" name="item[colour]">
+                                <!-- Your item color options here... -->
+                            </select><br />
+                        </div>
+                        <div class="label"><label for="block">Item Block</label>
+                            <textarea id="itemBlock" name="item[block]"></textarea><br />
+                        </div>
+                        <div class="label"><label for="link">Item Link</label>
+                            <input type="text" id="itemLink" name="item[link]" /><br />
+                        </div>
+                        <div class="label"><label for="status">Item Status</label>
+                            <select id="itemStatus" name="item[status]">
+                                <!-- Your item status options here... -->
+                            </select><br />
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <h2 class="green whitet pad20">Contact</h2>
+
+                    <div>
+                        <div class="label required"><label for="contactName">Author</label>
+                            <input maxlength="200" type="text" placeholder="Author" name="contact" id="contact"
+                                tabindex="12" required /><br />
+                        </div>
+                        <div class="label"><label for="phone">Phone number</label>
+                            <input maxlength="200" type="text" placeholder="Phone number" id="phone" name="phone"
+                                tabindex="13" /><br />
+                        </div>
+                        <div class="label"><label for="email">Email address</label>
+                            <input maxlength="200" type="text" placeholder="Email address " id="email" name="email"
+                                tabindex="14" /><br />
+                        </div>
+                    </div>
+
+                    <!-- Approve -->
+                    <h2 class="gold whitet pad20 pad20">Approve</h2>
+
+                    <div class="label"><label></label></div>
+                    <div class="flex pad20">
+                        <input class="submit" type="submit" value="Update" name="Submit" tabindex="15" />
+                        <input class="clear" type="reset" value="Clear" onClick="window.location.reload()"
+                            tabindex="16">
+                    </div>
+                </form><br /> <br />
+            </section>
+        </div>
+    </main>
+    <script>
+        // *** Get Date
+        function getDate() {
+            function formatDate(d) {
+                var dd = d.getDate()
+                if (dd < 10) dd = '0' + dd
+
+                var mm = d.getMonth() + 1
+                if (mm < 10) mm = '0' + mm
+
+                var yyyy = d.getFullYear() + 0 % 100
+                if (yyyy < 10) yyyy = '0' + yyyy
+
+                var tthh = d.getHours()
+                if (tthh < 10) tthh = '0' + tthh
+
+                var ttss = d.getMinutes()
+                if (ttss < 10) ttss = '0' + ttss
+
+                var monthNames = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"];
+
+                var mmm = monthNames[d.getMonth()]
+                return dd + ' ' + mmm + ' ' + yyyy
+            }
+
+            var d = new Date()
+            document.getElementById('date').value = formatDate(d);
+        }
+    </script>
+</body>
+
+</html>

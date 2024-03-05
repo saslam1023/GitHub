@@ -1,0 +1,823 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,300&family=Silkscreen:wght@400;700&display=swap');
+
+:root {
+    --fuschia: #dc14ad;
+    --lightblue: #14b4dc;
+    --green: #67dc14;
+    --crimson: crimson;
+    --gold: #f3a70e;
+    --black: #000;
+    --white: #fff;
+    --highlight-color: rgb(255, 240, 0);
+    --gray: #777;
+    --lightgray: #d1d1d1;
+    --gradientR: radial-gradient(circle, hsla(0, 0%, 22%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+    --gradientL: linear-gradient(360deg, hsla(0, 0%, 22%, 1) 0%, hsla(95, 83%, 47%, 1) 10%, hsla(0, 0%, 0%, 1) 20%, hsla(192, 83%, 47%, 1) 30%, hsla(0, 0%, 0%, 1) 40%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 0%, 1) 60%, hsla(314, 83%, 47%, 1) 70%, hsla(0, 0%, 0%, 1) 80%, hsla(40, 91%, 50%, 1) 90%, hsla(0, 0%, 0%, 1) 100%);
+    --gradientC: conic-gradient(from 135deg, black, gray);
+    /* --illuminate: radial-gradient(circle, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0.8) 100%);
+    /* illuminate inset option white
+   --boxshadow: inset 0 0 10px rgba(255, 255, 255, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.3),
+        inset 0 0 30px rgba(255, 255, 255, 0.2),
+        inset 0 0 40px rgba(255, 255, 255, 0.1);
+*/
+    /* Add a dark translucent radial gradient for the opposite effect */
+    /* --illuminate: conic-gradient(from -45deg, rgba(128, 128, 128, 0), rgba(0, 0, 0, 0.2), rgba(128, 128, 128, 0));*/
+    --illuminate: radial-gradient(circle, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.07) 100%);
+
+    /* Add a translucent inset box shadow for the opposite effect */
+    /*    --box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4),
+        inset 0 0 20px rgba(0, 0, 0, 0.3),
+        inset 0 0 30px rgba(0, 0, 0, 0.2),
+        inset 0 0 40px rgba(0, 0, 0, 0.1);*/
+    --bowshadow: none;
+    --transparent-gray-box: rgba(222, 222, 222, 0.3);
+    --transparent-gray-box2: rgba(222, 222, 222, 0.6);
+    --transparent-gray-box-dark: rgba(222, 222, 222, 0.8);
+
+}
+
+* {
+    margin: 0;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    word-wrap: break-all;
+    line-height: auto;
+}
+
+
+/* Links */
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+
+/* Text, Headings, Font */
+
+h1 {
+    font-size: 20px;
+    word-wrap: break-all;
+
+}
+
+.box h1,
+.box h2,
+.box h3,
+.box h4,
+.box p,
+.box i {
+    padding: 0px;
+}
+
+h2 {
+    font-size: 18px;
+    word-wrap: break-all;
+}
+
+h3 {
+    font-size: 16px;
+    word-wrap: break-all;
+}
+
+h4 {
+    font-size: 14px;
+    word-wrap: break-all;
+}
+
+.small {
+    font-size: 8px;
+}
+
+/* Header */
+
+header {
+    background-color: var(--white);
+    padding: 0;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    display: block;
+}
+
+.header {
+    background-color: var(--white);
+    padding: 30px;
+}
+
+/* Navigation */
+
+
+/* Containers */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0px;
+    /* Center vertically and horizontally */
+    justify-content: center;
+    align-items: center;
+}
+
+.boxRow {
+
+    aspect-ratio: 8 / 1;
+    border: 1px solid red;
+}
+
+.box,
+li.box {
+    color: white;
+    text-align: center;
+    width: 100%;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 2s ease-in, transform 1s ease-in-out 2s, translate 2s linear 2s, translate ease-in 2s;
+
+}
+
+
+
+
+
+small {
+    font-size: 8px;
+}
+
+.icon-clr {
+    width: 100%;
+    background-color: none;
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+/* Images */
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* Icons */
+
+.open {
+    position: absolute;
+    display: block;
+    color: #000;
+    width: max-content;
+    height: auto;
+    right: 0px;
+    top: 0px;
+    padding: 5px;
+}
+
+.boxIcon {
+    display: absolute;
+    margin: 0 auto;
+}
+
+.miniIcon {
+    display: absolute;
+    margin: 0 auto;
+    right: 0;
+
+}
+
+.right {
+    float: right;
+    text-align: right;
+    vertical-align: top;
+}
+
+.md-64 {
+    font-size: 64px;
+}
+
+.md-48 {
+    font-size: 48px;
+}
+
+.md-32 {
+    font-size: 32px;
+}
+
+.md-16 {
+    font-size: 16px;
+}
+
+.md-8 {
+    font-size: 8px;
+}
+
+/* Alignment */
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Colours  */
+
+.pink {
+    background-color: var(--fuschia);
+    transform: rotate(360deg);
+}
+
+.pinkt {
+    color: var(--pink);
+}
+
+.blue {
+    background-color: var(--lightblue);
+    animation: scaleSize 2s ease-in-out;
+
+
+}
+
+.bluet {
+    color: var(--blue);
+}
+
+.green {
+    background-color: var(--green);
+    animation: scaleSize 2s ease-in-out;
+
+}
+
+.greent {
+    color: var(--green);
+}
+
+
+@keyframes scaleSize {
+
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+        background-color: white;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+        /* Start and end with opacity set to 0 */
+    }
+
+    50% {
+        opacity: 1;
+        /* Peak opacity in the middle of the animation */
+    }
+}
+
+
+@keyframes gentlefadeInOut {
+
+    0%,
+    100% {
+        opacity: 0.7;
+        /* Start and end with opacity set to 0 */
+    }
+
+    50% {
+        opacity: 1;
+        /* Peak opacity in the middle of the animation */
+    }
+}
+
+/* .colored-box {
+    width: 100px;
+    height: 100px;
+    background-color: blue; /* Choose your desired color 
+animation: fadeInOut 10s ease-in-out infinite;
+/* 10-second animation with ease-in-out timing function, set to repeat indefinitely 
+  }*/
+
+.gold {
+    background-color: var(--gold);
+    animation: fadeInOut 5s ease-in-out;
+    animation: gentlefadeInOut 10s ease-in-out infinite;
+    /* 10-second animation with ease-in-out timing function, set to repeat indefinitely */
+}
+
+.goldt {
+    color: var(--gold);
+
+}
+
+.black {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.white {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.gray {
+    background-color: var(--gray);
+    color: var(--lightgray);
+    text-align: center;
+    justify-content: center;
+}
+
+.gradientR {
+    background-image: var(--gradientR);
+}
+
+.gradientL {
+    background-image: var(--gradientL);
+}
+
+.gradientC {
+    background-image: var(--gradientC);
+}
+
+.round-border {
+    border: 3px solid black;
+    border-radius: 3;
+}
+
+.blackt {
+    color: var(--black);
+}
+
+.whitet {
+    color: var(--white);
+}
+
+/* Media queries */
+
+/* Tablet */
+
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, 25%);
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, 50%);
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+/* Forms */
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    outline-width: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+}
+
+input {
+    width: 100px;
+}
+
+/* Search bar */
+#search-bar-container {
+    position: relative;
+    width: 80%;
+    border: 0px;
+    padding: 0;
+    text-align: left;
+    top: 0;
+    vertical-align: top;
+}
+
+#search-bar {
+    padding: 2px;
+    width: 90%;
+    height: 32px;
+}
+
+#search-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 0;
+    width: 100%;
+    border: 0px solid #ddd;
+    background-color: var(--highlight-color);
+    color: var(--black);
+    display: none;
+
+}
+
+#search-options li {
+    padding: 0px 8px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 12px;
+}
+
+#search-results {
+    margin-top: 0px;
+    text-align: left;
+}
+
+
+#clear-btn {
+    margin: 0px;
+    cursor: pointer;
+    color: var(--black);
+    border: 0px solid red;
+    display: inline;
+    width: 20px;
+    float: right;
+}
+
+.highlight {
+    background-color: var(--highlight-color);
+    color: #000;
+    /* Set text color for readability */
+}
+
+#search-options>li {
+    list-style: none;
+    border: 1px solid rgb(0, 183, 255);
+    transition: height 3s ease-in-out;
+}
+
+
+/* Tooltips */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    /*width: 120px;*/
+    background-color: var(--highlight-color);
+    color: var(--black);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 0%;
+    margin-left: -60px;
+    font-size: 12px;
+
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* quick view */
+
+/*body {
+    margin: 0;
+    padding: 0;
+    ;
+}*/
+
+
+ul[class] {
+    margin: 0;
+    padding: 0;
+}
+
+ul[class] li {
+    list-style: none;
+    border: 0px solid red;
+    /* transition: height 1s ease-in-out opacity 1s ease;*/
+}
+
+
+
+li[data-view] {
+    /* Styles for list items with the data-view attribute */
+    /* transition: height 2s ease-in-out, opacity 1s ease;
+    /*  cursor: pointer;*/
+    width: 12.5%;
+    aspect-ratio: 1;
+    background-color: inherit;
+    opacity: 0;
+
+}
+
+ul[class] li>* {
+    margin: 0rem;
+
+}
+
+:focus {
+    box-shadow: 0 0 0 0rem rebeccapurple;
+    outline: 0;
+}
+
+/* [1] 'auto-fit' grid columns, so no media queries required. */
+/* [2] 'dense' packing fills in holes earlier in the grid. */
+.grid {
+    display: grid;
+    gap: 0rem;
+    grid-auto-flow: dense;
+    /* [2] */
+    grid-template-columns: repeat(auto-fit, 12.5%);
+    border: 0px solid black;
+    /* [1] */
+    justify-content: center;
+    transition: height 2s ease-in-out;
+}
+
+.grid>* {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 2s ease;
+
+}
+
+.grid-container {
+    /* ADDED */
+    position: relative;
+    transition: opacity 2s ease;
+}
+
+/* [3] Make fullwidth card span all grid columns. */
+.fullwidth {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    transition: height 1s ease-in-out, position 1s ease, opacity 2s ease;
+
+}
+
+.box>.fullwidth {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.is-hidden {
+    display: none;
+    height: 0;
+}
+
+.fullwidth.is-hidden {
+    height: 0;
+    overflow: hidden;
+}
+
+.fullwidth:not(.is-hidden) {
+    overflow: auto;
+    top: 0;
+    left: 0;
+    /* Set the height to 100vh when not hidden */
+}
+
+.fullwidth,
+.is-selected {
+
+    color: var(--black);
+    height: auto;
+}
+
+
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.expand {
+    grid-column: 1 / -1;
+    padding-top: 20px;
+    height: auto;
+    width: 100%;
+
+}
+
+.li:not(.expand) {
+    grid-column: 1 / 8;
+}
+
+.expand h1 {
+    font-size: 32px;
+}
+
+.expand h2::before {
+    content: '';
+}
+
+.expand h2 {
+    font-size: 32px;
+
+}
+
+hr {
+    border-bottom: 1px solid black;
+    width: 100%;
+
+}
+
+
+.contentLayout {
+    width: 80%;
+    border: 0px solid black;
+    background: var(--transparent-gray-box);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    columns: 2;
+    column-gap: 5%;
+}
+
+li>div.contentLayout {
+    margin: 50px auto;
+
+}
+
+.contentLayout p,
+.contentLayout blockquote,
+.contentLayout:active,
+.contentLayout:hover {
+    font-family: 'DM Mono', monospace;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.contentLayout blockquote {
+    background: var(--transparent-gray-box);
+    padding: 32px;
+    width: 40%;
+    margin: 16px;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.contentLayout p {
+    background: var(--transparent-gray-box);
+    padding: 32px;
+    width: auto;
+    margin: 0 16px;
+    display: inline-block;
+}
+
+.contentLayoutDiv {
+    text-align: left;
+    width: 300px;
+    background: var(--transparent-gray-box2);
+    font-family: 'DM Mono', monospace;
+    font-style: italic;
+    font-weight: 300;
+    padding: 30px;
+    aspect-ratio: 1;
+}
+
+
+
+/*.contentLayout h2 {
+    text-align: left;
+    width: 300px;
+    background: var(--transparent-gray-box2);
+    font-family: 'DM Mono', monospace;
+    font-style: italic;
+    font-weight: 300;
+    padding: 30px;
+    aspect-ratio: 1;
+}
+*/
+.contentLayout h2,
+h4 {
+    font-family: 'DM Mono', monospace;
+    font-style: italic;
+}
+
+.caption {
+    font-size: 12px;
+    font-family: 'DM Mono', monospace;
+    padding: 0 8px;
+}
+
+.contentLayout h3 {
+    font-family: 'DM Mono', monospace;
+    font-weight: bold;
+    background-color: var(--transparent-gray-box-dark);
+    padding: 30px;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+
+.contentLayout div img {
+    float: right;
+}
+
+.pad50 {
+    padding-bottom: 50px;
+}
+
+.square-box {
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(from 0deg at 50% 0%, #ffffff 0%, #e0e0e0 25%, #333333 75%, #ffffff 100%) top,
+        conic-gradient(from 90deg at 100% 50%, #e0e0e0 0%, #ffffff 25%, #333333 75%, #e0e0e0 100%) right,
+        conic-gradient(from 180deg at 50% 100%, #ffffff 0%, #e0e0e0 25%, #333333 75%, #ffffff 100%) bottom,
+        conic-gradient(from 270deg at 0% 50%, #e0e0e0 0%, #ffffff 25%, #333333 75%, #e0e0e0 100%) left;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.illuminate {
+    background-image: var(--illuminate);
+}
+
+.boxshadow {
+    box-shadow: var(--boxshadow);
+}
+
+
+.clickable {
+    width: 90%;
+    height: auto;
+    /*  border: 0px solid red;*/
+}
+
+.clicked {
+    padding-left: 50px;
+    padding-right: 25px;
+
+}
+
+
+h2.clicked {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    background-color: var(--highlight-color);
+    width: auto;
+}
+
+/* this works too
+h2.clicked::after {
+    content: "\00a0";
+}
+*/
+
+.dm-mono-regular {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-mono-medium {
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.dm-mono-light-italic {
+    font-family: "DM Mono", monospace;
+    font-weight: 300;
+    font-style: italic;
+}

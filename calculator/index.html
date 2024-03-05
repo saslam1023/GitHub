@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator-styles-bw.css">
+    <script src="my-calculator.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.1.0/math.min.js" defer></script>
+
+    <title>Calculator</title>
+
+
+</head>
+
+<body>
+
+    <main class="calcContainer">
+        <form id="calculatorForm" class="container calculator blue">
+            <div class="three">
+                <h2 class="heading">calculator</h2>
+            </div>
+            <input type="text" id="result" class="result calculator screen three" placeholder="enter query">
+
+            <button id="1" value="1" class="calculator button">1</button>
+            <button id="2" value="2" class="calculator button">2</button>
+            <button id="3" value="3" class="calculator button">3</button>
+
+            <div class="four">
+                <button id="add" value="+" class="calculator button operator">+</button>
+                <button id="subtract" value="-" class="calculator button operator">-</button>
+                <button id="multiply" value="*" class="calculator button operator">*</button>
+                <button id="divide" value="/" class="calculator button operator">/</button>
+
+            </div>
+
+            <button id="4" value="4" class="calculator button">4</button>
+            <button id="5" value="5" class="calculator button">5</button>
+            <button id="6" value="6" class="calculator button">6</button>
+            <button id="7" value="7" class="calculator button">7</button>
+            <button id="8" value="8" class="calculator button">8</button>
+            <button id="9" value="9" class="calculator button">9</button>
+
+            <input type="reset" id="reset" class="one reset" value="c" name="reset" onclick="clearQuery()">
+            <button id="0" value="0" class="calculator button">0</button>
+            <input type="button" id="sumbtn" value="=" class="one equal" onclick="calculate()" />
+
+
+
+        </form>
+    </main>
+
+
+</body>
+
+</html>

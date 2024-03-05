@@ -1,0 +1,868 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "category": "Fixed",
+            "h1": "Pixel Perfect 2",
+            "h2": "",
+            "h3": "Sharp. Clear. Distinct.",
+            "icon": "",
+            "boxlink": "",
+            "boxcontent": "",
+            "item": {
+                "heading": "Pixel Perfect",
+                "subheading": "Sharp. Clear. Distinct.",
+                "date": "",
+                "image": "images/placeholder.jpg",
+                "caption": "",
+                "content": "Fuga sunt aspernatur ducimus quae, pariatur, tempore possimus dolores rerum excepturi libero atque quam vel aliquid dolorem optio nemo perspiciatis minima magni reprehenderit recusandae, delectus rem.",
+                "colour": "black",
+                "block": "Fuga sunt aspernatur ducimus quae, pariatur, tempore possimus dolores rerum excepturi libero atque quam vel aliquid dolorem optio nemo perspiciatis minima magni reprehenderit recusandae, delectus rem.",
+                "link": "#",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 2,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "white",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 3,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "pink",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 4,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "<span class='miniIcon material-symbols-rounded md-16 open whitet' id='clear-btn'>close</span>",
+            "boxlink": "blank",
+            "boxcontent": "<div id='search-bar-container><h2 class='blackt left'>Search</h2><input type='text' id='search-bar' placeholder='?'><ul id='search-options'></ul><div id='search-results'></div>",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "green",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 5,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "blue",
+                "block": "",
+                "link": "#",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 6,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "I'm a crafter",
+            "h3": "",
+            "icon": "<span class='miniIcon material-icons-round whitet md-16 open'>help_outline</span>",
+            "boxlink": "blank",
+            "boxcontent": "",
+            "item": {
+                "heading": "I'm a crafter",
+                "subheading": "Crafting is my speciality",
+                "date": "22 January 2024",
+                "image": "placeholder.jpg",
+                "caption": "Image of placeholder",
+                "content": "<p>Fuga sunt aspernatur ducimus quae, pariatur, tempore possimus dolores rerum excepturi libero atque quam vel aliquid dolorem optio nemo perspiciatis minima magni reprehenderit recusandae, delectus rem.Fuga sunt aspernatur ducimus quae, pariatur, tempore possimus dolores rerum excepturi libero atque quam vel aliquid dolorem optio nemo perspiciatis minima magni reprehenderit recusandae, delectus rem.</p><p>Fuga sunt aspernatur ducimus quae, pariatur, tempore possimus dolores rerum excepturi libero atque quam vel aliquid dolorem optio nemo perspiciatis minima magni reprehenderit recusandae, delectus rem.</p><blockquote>Block quote Fuga sunt aspernatur ducimus quae, pariatur, tempore possimus dolores rerum excepturi libero atque quam vel aliquid dolorem optio nemo perspiciatis minima magni reprehenderit recusandae, delectus rem.</blockquote>",
+                "colour": "gold",
+                "block": "I've always been a crafter",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 7,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "black",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 8,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "Let's talk",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "<span class='boxIcon material-icons-round md-64 whitet'>perm_phone_msg</span>",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "green",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 9,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "green",
+                "block": "",
+                "link": "#",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 10,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "Creative Design",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "<span class='boxIcon material-icons-round blackt md-64'>explore</span>",
+            "item": {
+                "heading": "Creative Design",
+                "subheading": "It's not all PhotoShop and Posters",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "pink",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 11,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "white",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 12,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "black",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 13,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "gold",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 14,
+            "category": "",
+            "h1": "",
+            "h2": "Github",
+            "h3": "",
+            "icon": "<span class=' miniIcon open blackt md-16 material-icons-round'>open_in_new</span>",
+            "boxlink": "https://github.com/saslam1023/",
+            "boxcontent": "<a href='https://github.com/saslam1023/' target='_blank'><svg height='64' aria-hidden='true' viewBox='0 0 16 16' version='1.1' width='64' data-view-component='true' class='octicon octicon-mark-github v-align-middle color-fg-default'><path d='M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'></path></svg></a>",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "green",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 15,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "white",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 16,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "gold",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 17,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "blue",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 18,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "black",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 19,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "gold",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 20,
+            "category": "Project",
+            "h1": "",
+            "h2": "Bug Invasion",
+            "h3": "A game",
+            "icon": "<span class='miniIcon open md-16 blackt material-icons-round'>open_in_new</span>",
+            "boxlink": "https://scratch.mit.edu/projects/931605727",
+            "boxcontent": "<a href='https://scratch.mit.edu/projects/931605727' target='_blank'><span class='boxIcon material-icons-round md-64 whitet'>bug_report</span></a>",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "blue",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 21,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "white",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 22,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "pink",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 23,
+            "category": "Learn",
+            "h1": "",
+            "h2": "CS50",
+            "h3": "",
+            "icon": "",
+            "boxlink": "https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science",
+            "boxcontent": "",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "black",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 24,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "white",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 25,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "white",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 26,
+            "category": "",
+            "h1": "",
+            "h2": "Site design",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "",
+            "item": {
+                "heading": "Site design test",
+                "subheading": "The Pixel Perfect concept",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "What does it all mean??",
+                "colour": "green",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 27,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "blue",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 28,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "white",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 29,
+            "category": "",
+            "h1": "",
+            "h2": "Software Dev",
+            "h3": "Bootcamp",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "",
+            "item": {
+                "heading": "Software Development",
+                "subheading": "It's a mixed bag",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "pink",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 30,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "gold",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 31,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "blue",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 32,
+            "category": "End",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "<small>Copyright<br> saslam1023<br>2024</small>",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "caption": "",
+                "content": "",
+                "colour": "black",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        }
+    ]
+}

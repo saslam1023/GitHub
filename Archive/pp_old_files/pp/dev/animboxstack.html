@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Animation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,300&family=Silkscreen:wght@400;700&display=swap');
+
+        :root {
+            --fuchsia: #dc14ad;
+            --lightblue: #14b4dc;
+            --green: #67dc14;
+            --crimson: crimson;
+            --gold: #f3a70e;
+            --black: #000;
+            --white: #fff;
+            --highlight-color: rgb(255, 240, 0);
+            --gray: #777;
+            --lightgray: #d1d1d1;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            /* Set default text color */
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 10px);
+            /* Adjust the pixel size here */
+            gap: 0;
+            /* No gap between pixels */
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            /* Ensure pixels are behind text */
+        }
+
+        .pixel {
+            width: 10px;
+            /* Adjust the pixel size here */
+            height: 10px;
+            /* Adjust the pixel size here */
+            background-color: transparent;
+            opacity: 0;
+        }
+
+        .text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 32px;
+            width: auto;
+            z-index: 2;
+            /* Ensure text appears above pixels */
+        }
+
+        .text {
+            font-size: 64px;
+            color: white;
+            background-color: #000;
+            font-family: 'Silkscreen', sans-serif;
+            /* Adjust font size as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div class="text-container">
+        <div class="text">Pixel Perfect</div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById('container');
+            const numPixels = Math.floor(window.innerWidth / 10) * Math.floor(window.innerHeight / 10);
+            const colors = ['black', '#dc14ad', 'black', '#14b4dc', 'black', '#f3a70e', '#67dc14', 'black', 'white', 'black']; // Remove white from colors
+
+            // Create pixel elements and add them to the container
+            for (let i = 0; i < numPixels; i++) {
+                const pixel = document.createElement('div');
+                pixel.classList.add('pixel');
+                container.appendChild(pixel);
+
+                // Randomize opacity for each pixel
+                pixel.style.opacity = '0';
+
+                // Randomize color for each pixel
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                pixel.style.backgroundColor = randomColor;
+
+                // Set a delay for appearance
+                const delay = Math.random() * 10; // Random delay between 0 and 10 seconds
+                setTimeout(() => {
+                    pixel.style.opacity = '1';
+                }, delay * 1000); // Convert to milliseconds
+            }
+        });
+    </script>
+</body>
+
+</html>

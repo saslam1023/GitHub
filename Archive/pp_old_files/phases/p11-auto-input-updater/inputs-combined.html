@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Updates and Class Updates</title>
+    <link rel="stylesheet" href="css/dash-styleview.css"> <!-- External CSS stylesheet -->
+    <style>
+        .defaultStyle {
+            color: transparent;
+            font-size: 16px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="inputText1">Input Text 1:</label>
+    <input type="text" id="inputText1" oninput="updateElement1('outputElement1', this.value)">
+
+    <br>
+
+    <label for="inputText2">Input Text 2:</label>
+    <input type="text" id="inputText2" oninput="updateElement2('outputElement2', this.value)">
+
+    <br>
+
+    <label for="textarea">Textarea:</label>
+    <textarea id="textarea" oninput="updateElement3('outputElement3', this.value)"></textarea>
+
+    <br>
+
+    <label for="select">Select:</label>
+    <select id="select" onchange="updateElement4('outputElement4', this.value)">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+
+    <br>
+
+    <input type="checkbox" id="checkbox" onchange="updateElement5('outputElement5', this.checked)">
+    <label for="checkbox">Checkbox</label>
+
+    <br>
+
+    <div id="outputElement1">Content for Input Text 1 will be updated here</div>
+    <div id="outputElement2">Content for Input Text 2 will be updated here</div>
+    <div id="outputElement3">Content for Textarea will be updated here</div>
+    <div id="outputElement4">Content for Select will be updated here</div>
+    <div id="outputElement5">Content for Checkbox will be updated here</div>
+
+    <label for="inputText">Enter Class or Value:</label>
+    <input type="text" id="inputText" oninput="updateElement(this.value)">
+
+    <br>
+
+    <div id="outputElement" class="defaultStyle box">Content will be updated here</div>
+
+    <script>
+        const hasClassInStylesheet = className => {
+            const styleSheets = Array.from(document.styleSheets);
+            return styleSheets.some(sheet =>
+                Array.from(sheet.rules || sheet.cssRules).some(rule => rule.selectorText === `.${className}`)
+            );
+        };
+
+        const updateElement = userInput => {
+            const outputElement = document.getElementById("outputElement");
+
+            outputElement.className = hasClassInStylesheet(userInput) ? `defaultStyle ${userInput}` : "defaultStyle";
+            outputElement.innerText = hasClassInStylesheet(userInput) ? "" : userInput;
+        };
+
+        const updateElement1 = (outputId, value) => {
+            document.getElementById(outputId).innerText = value;
+        };
+
+        const updateElement2 = (outputId, value) => {
+            document.getElementById(outputId).innerText = value;
+        };
+
+        const updateElement3 = (outputId, value) => {
+            document.getElementById(outputId).innerText = value;
+        };
+
+        const updateElement4 = (outputId, value) => {
+            document.getElementById(outputId).innerText = value;
+        };
+
+        const updateElement5 = (outputId, value) => {
+            document.getElementById(outputId).innerText = value;
+        };
+    </script>
+
+</body>
+
+</html>

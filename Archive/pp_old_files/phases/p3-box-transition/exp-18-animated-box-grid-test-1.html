@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: lightblue;
+            border: 1px solid black;
+        }
+
+        .box {
+            /* width: 12.5%;*/
+            width: 150px;
+            height: 150px;
+            aspect-ratio: 1;
+            /* Dynamic width for 8 boxes in a row, minus border */
+            /* transform: translate(0%, 0%);*/
+            cursor: pointer;
+            transition: width 2s 5s ease-in-out, height 1s 3s ease-in-out;
+            background-color: red;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .expandable-box {
+            width: 100%;
+            height: 200px;
+            background-color: #3498db;
+            position: relative;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            transition: height 1s ease-in-out, width 1s 2s ease-in-out;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .expanded {
+            width: 200vw;
+            height: 100vh;
+            /*/*/
+        }
+
+        .expanded2 {
+            width: 100vw;
+            height: 100vh;
+            background-color: yellow;
+            font-size: 60px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <title>working box expanding code</title>
+</head>
+
+<body>
+    <div class="container">HERE
+        <div class="expandable-box">
+            <div class="box">1true</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+        </div>
+        <div class="expandable-box">
+            <div class="box">1 second</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+        </div>
+        <div class="expandable-box">
+            <div class="box">1 third</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+        </div>
+        <div class="expandable-box">
+            <div class="box">1 fourth</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+        </div>
+    </div>
+    <!-- <div class="expandable-box">
+
+    </div>-->
+
+    <script>
+        $(document).ready(function () {
+            $(".box").click(function () {
+                // Toggle the 'expanded' class to switch between states
+                $(this).toggleClass("expanded2");
+                $(".expandable-box").toggleClass("expanded");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

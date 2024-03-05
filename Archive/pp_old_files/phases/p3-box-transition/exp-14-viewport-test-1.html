@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            /* Prevent scrolling on the body */
+        }
+
+        .container {
+            background-color: lightblue;
+            padding: 20px;
+            transform: scale(2);
+            /* Initial scale, you can adjust this as needed */
+            transform-origin: center center;
+            transition: transform 0.5s ease-in-out;
+            /* Add a smooth transition effect */
+        }
+
+        /* Add media query to handle small screens */
+        @media (max-width: 600px) {
+            .container {
+                transform: scale(1);
+                /* Adjust the scale for small screens */
+            }
+        }
+    </style>
+    <title>Centered and Expandable Container</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Your content goes here -->
+        <p>This is the content of the container.</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .flex-container {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .flex-item {
+            flex: 1 / 8;
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .gray-bg {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="flex-container" class="flex-container">
+        <!-- Your initial li items go here -->
+        <li class="flex-item">Item 1</li>
+        <li class="flex-item">Item 2</li>
+        <li class="flex-item">Item 3</li>
+        <li class="flex-item">Item 4</li>
+        <li class="flex-item">Item 5</li>
+        <li class="flex-item">Item 6</li>
+        <li class="flex-item">Item 7</li>
+        <li class="flex-item">Item 8</li>
+        <li class="flex-item">Item 9</li>
+        <li class="flex-item">Item 10</li>
+        <li class="flex-item">Item 11</li>
+        <li class="flex-item">Item 12</li>
+        <!-- Add or remove li items as needed -->
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const flexContainer = document.getElementById('flex-container');
+            const targetItemCount = 8;
+
+            // Check the current number of li elements
+            const currentItemCount = flexContainer.childElementCount;
+
+            // Add placeholder li elements if needed
+            for (let i = currentItemCount; i < targetItemCount; i++) {
+                const placeholderLi = document.createElement('li');
+                placeholderLi.classList.add('flex-item', 'gray-bg');
+                placeholderLi.textContent = 'Placeholder';
+                flexContainer.appendChild(placeholderLi);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

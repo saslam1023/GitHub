@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <main>
+        <h1>Playing with CSS Grid... to "inject" a fullwidth grid item into a grid whose columns are
+            <i>auto-arranged</i>
+        </h1>
+        <p>Imagine a grid of product cards, where clicking on a "quick view" button "injects" a new card that is
+            expanded full width of the entire grid, immediately below the card that was clicked (thereby allowing a
+            visual "connection" between the two cards), and is completely responsive.</p>
+        <ul>
+            <li>Usually, "quick views" are rendered as popups or overlays, but in this case, an "inline" solution is
+                required.</li>
+            <li>This mock-up requires very little CSS code to achieve it, and <strong>zero media queries</strong>.</li>
+            <li>In reality, the "injected" card will probably be fetched via JavaScript and placed in the correct place
+                in the DOM. However, for demo purposes, I've directly added the fullwidth cards in their correct
+                positions in the DOM, and I'm simply toggling their visibility.</li>
+        </ul>
+
+        <h2>Accessibility considerations</h2>
+        <ul>
+            <li>HTML source order is preserved for the cards, providing a good natural tab order.</li>
+            <li>The "quick view" buttons behave as "toggles", so they have <code>aria-expanded</code> and
+                <code>aria-controls</code> attributes. See <a
+                    href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/">ARIA best practices - disclosure
+                    widget</a> for more information.
+            </li>
+            <li>Focus management ensures the "injected" card can receive keyboard focus, and on closing the card,
+                keyboard focus is returned to the button that originally toggled the card's visibility.</li>
+            <li>Read the full <a href="https://css-tricks.com/expandable-sections-within-a-css-grid/">CSS Tricks
+                    article.</a>
+            </li>
+        </ul>
+
+        <ul class="grid">
+            <li>
+                <p>1</p>
+            </li>
+            <li>
+                <p>2</p>
+                <button type="button" data-quick-view>Quick view</button>
+            </li>
+            <li class="fullwidth is-hidden" id="quickview-01">
+                <button type="button" data-close>Close 2</button>
+                <p>fullwidth 2</p>
+                <p>This grid item needs to stretch the full width of the page, and force other grid items to reflow
+                    around it, whilst remaining "visually connected" to the preceeding grid item.</p>
+                <p>Test <a href="#">inline link</a>.</p>
+            </li>
+            <li>
+                <p>3</p>
+            </li>
+            <li>
+                <p>4</p>
+                <button type="button" data-quick-view>Quick view</button>
+            </li>
+            <li class="fullwidth is-hidden" id="quickview-04">
+                <button type="button" data-close>Close 4</button>
+                <p>fullwidth 4</p>
+                <p>This grid item needs to stretch the full width of the page, and force other grid items to reflow
+                    around it, whilst remaining "visually connected" to the preceeding grid item.</p>
+                <p>Test <a href="#">inline link</a>.</p>
+            </li>
+            <li>
+                <p>5</p>
+                <button type="button" data-quick-view>Quick view</button>
+            </li>
+            <li class="fullwidth is-hidden" id="quickview-05">
+                <button type="button" data-close>Close 5</button>
+                <p>fullwidth 5</p>
+                <p>This grid item needs to stretch the full width of the page, and force other grid items to reflow
+                    around it, whilst remaining "visually connected" to the preceeding grid item.</p>
+                <p>Test <a href="#">inline link</a>.</p>
+            </li>
+            <li>
+                <p>6</p>
+            </li>
+            <li>
+                <p>7</p>
+            </li>
+            <li>
+                <p>8</p>
+            </li>
+        </ul>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

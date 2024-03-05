@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Sixtyfour&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Major+Mono+Display&display=swap');
+
+:root {
+    --blue: rgb(108, 108, 108);
+    --purple: #7300ff;
+    --lightblue: #030303;
+    --screen: rgb(230, 230, 230);
+    --lightpurple: #eee0ff;
+    --mediumpurple: #c4bbcf;
+    --darkpurple: #370476;
+}
+
+body {
+    background-color: var(--purple);
+    background-repeat: repeat;
+    background-image: url("gplay.png");
+    font-family: "Major Mono Display", monospace;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+.calcContainer {
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+
+
+.heading {
+    font-family: "Major Mono Display", monospace;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" 0;
+    font-size: 24px;
+    text-align: right;
+    padding-left: 50px;
+}
+
+.container {
+    width: 400px;
+    height: auto;
+    border: 2px solid var(--darkpurple);
+    border-radius: 20px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Creates three equal-width columns */
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 40px;
+    background-image: linear-gradient(to bottom, #370476, #42048e, #4d04a7, #5903c1, #6402db, #6402db, #6402db, #6402db, #5903c1, #4d04a7, #42048e, #370476);
+    color: white;
+}
+
+h1,
+h2,
+h3 {
+    font-size: 2rem;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.four {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row: span 4;
+    font-size: 40px;
+    gap: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+
+button,
+.button {
+    font-size: 40px;
+    border-radius: 30px 10px;
+    aspect-ratio: 1;
+    color: black;
+    width: 100%;
+    height: 100%;
+    font-family: "Major Mono Display", monospace;
+    background-color: var(--lightpurple);
+    color: black;
+    background-image: linear-gradient(to top, #8875a1, #9786ac, #a697b8, #b5a9c3, #c4bbcf);
+}
+
+.reset {
+    width: 100%;
+    font-size: 40px;
+    aspect-ratio: 1;
+    border-radius: 30px 10px;
+    font-family: "Major Mono Display", monospace;
+    background-image: linear-gradient(to bottom, #8875a1, #7c6b93, #716185, #665778, #5b4e6b);
+    color: black;
+}
+
+.operator {
+    border-radius: 30px 10px;
+    font-family: "Major Mono Display", monospace;
+    background-color: var(--mediumpurple);
+    color: black;
+
+}
+
+.equal {
+    height: 60px;
+    font-size: 40px;
+    height: 100%;
+    border-radius: 30px 10px;
+    font-family: "Major Mono Display", monospace;
+    background-image: linear-gradient(to bottom, #8875a1, #7c6b93, #716185, #665778, #5b4e6b);
+    color: white;
+}
+
+
+.three {
+    grid-column: span 4;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.two {
+    grid-column: span 2;
+
+}
+
+.one {
+    grid-column: span 1;
+
+}
+
+
+.screen {
+    text-align: right;
+    height: 80px;
+    padding: 0 20px;
+    margin: 0 0 20px 0;
+    font-size: 40px;
+    border-radius: 32px 12px;
+    background-color: var(--lightpurple);
+    color: var(--darkpurple);
+    font-family: "Major Mono Display", monospace;
+    font-weight: bold;
+}
+
+.space-mono-regular {
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.major-mono display-regular {
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+}

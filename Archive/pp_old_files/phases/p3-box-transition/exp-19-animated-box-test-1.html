@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .expandable-box {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db;
+            border: 1px solid black;
+            position: relative;
+            /*top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);*/
+            cursor: pointer;
+            transition: width 1s ease-in-out, height 1s 1s ease-in-out;
+
+
+
+        }
+
+        .expanded {
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            position: fixed;
+        }
+    </style>
+    <title>working box expanding code</title>
+</head>
+
+<body>
+
+    <div class="expandable-box"></div>
+    <div class="expandable-box"></div>
+
+    <script>
+        $(document).ready(function () {
+            $(".expandable-box").click(function () {
+                // Toggle the 'expanded' class to switch between states
+                $(this).toggleClass("expanded");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

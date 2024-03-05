@@ -1,0 +1,31 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 50px;
+}
+
+canvas {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.controls {
+    text-align: center;
+}
+
+.controls label,
+.controls input,
+.controls button {
+    display: block;
+    margin-bottom: 10px;
+}

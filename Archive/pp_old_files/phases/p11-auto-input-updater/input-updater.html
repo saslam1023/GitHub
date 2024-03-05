@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Class Updates</title>
+    <link rel="stylesheet" href="css/dash-styleview.css"> <!-- External CSS stylesheet -->
+    <style>
+        .defaultStyle {
+            color: transparent;
+            font-size: 16px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="inputText">Enter Class or Value:</label>
+    <input type="text" id="inputText" oninput="updateElement(this.value)">
+
+    <br>
+
+    <div id="outputElement" class="defaultStyle box">Content will be updated here</div>
+
+
+
+    <script>
+        const updateElement = userInput => {
+            const outputElement = document.getElementById("outputElement");
+
+            outputElement.className = hasClassInStylesheet(userInput) ? `defaultStyle ${userInput}` : "defaultStyle";
+            outputElement.innerText = hasClassInStylesheet(userInput) ? "" : userInput;
+        };
+
+        const hasClassInStylesheet = className => {
+            const styleSheets = Array.from(document.styleSheets);
+            return styleSheets.some(sheet =>
+                Array.from(sheet.rules || sheet.cssRules).some(rule => rule.selectorText === `.${className}`)
+            );
+        };
+    </script>
+
+
+
+
+
+</body>
+
+</html>

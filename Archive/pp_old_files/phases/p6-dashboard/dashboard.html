@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/dash-styleview.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/process-data.js"></script>
+    <script>
+
+        /*function changeImage(element)
+        {
+          var x = document.getElementById("imagefile");
+          var v = x;
+          var z = document.getElementById("imageoutput");
+         // var v = x.getAttribute("src");
+         // if(v == "feed-blue.png")
+         //   v = "feed-orange.png");
+         // else
+         //   v = "feed-blue.png");
+         alert ("alert: " +x + v + z+"")
+          z.setAttribute("src", v); 
+        }
+        */
+
+        // *** Get Date{}
+        function getDate() {
+            //  document.getElementById('date').value = new Date();
+            //  document.articleform.date.value = new Date();};
+            function formatDate(d) {
+
+                var dd = d.getDate()
+                if (dd < 10) dd = '0' + dd
+
+                var mm = d.getMonth(4) + 1
+                if (mm < 10) mm = '0' + mm
+
+                var yyyy = d.getFullYear() + 0 % 100
+                if (yyyy < 10) yyyy = '0' + yyyy
+
+                var tthh = d.getHours()
+                if (tthh < 10) tthh = '0' + tthh
+
+                var ttss = d.getMinutes()
+                if (ttss < 10) ttss = '0' + ttss
+
+                var monthNames = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"];
+
+                var mmm = monthNames[d.getMonth()]
+                return dd + ' ' + mmm + ' ' + yyyy
+            }
+
+            var d = new Date()  // 30 Jan 2011
+            //alert( formatDate(d) )  // '30.01.11'
+            document.getElementById('date').value = formatDate(d);
+
+        }
+        //. end date
+    </script>
+
+
+    <title>Welcome to: saslam1023.github.io: Dashboard</title>
+</head>
+
+<body>
+    <!-- heading -->
+
+    <main>
+        <div class="table-container">
+            <h1>Dashboard</h1>
+            <input class="datebox" type="text" id="date" name="date" readonly />
+            <script>getDate();</script>
+            <table class="table" id="table">
+                <caption class="tr dark">
+                    Site content
+                </caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>H1</th>
+                        <th>H2</th>
+                        <th>H3</th>
+                        <th>Icon</th>
+                        <th>Heading</th>
+                        <th>Subheading</th>
+                        <th>Date</th>
+                        <th>Image</th>
+                        <th>Content</th>
+                        <th>Block</th>
+                        <th>Link</th>
+                        <th>Colour</th>
+                        <th>Status</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+            </table>
+        </div>
+    </main>
+
+    <script src="js/view.js"></script>
+
+
+</body>
+
+</html>

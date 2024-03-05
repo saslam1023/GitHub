@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Animation</title>
+    <style>
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        #outerCircle {
+            width: 400px;
+            height: 400px;
+            top: 50px;
+            left: 50px;
+            background-color: lightblue;
+        }
+
+        #innerCircle {
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+        }
+
+        .pen {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outerCircle" class="circle"></div>
+    <div id="innerCircle" class="circle"></div>
+    <div id="penPosition" class="pen"></div>
+
+    <!-- Slider for controlling the inner circle position -->
+    <label for="icSlider">Inner Circle Position:</label>
+    <input type="range" id="icSlider" min="0" max="10" value="5">
+
+    <!-- Slider for controlling the pen position within the inner circle -->
+    <label for="icPPSlider">Pen Position within Inner Circle:</label>
+    <input type="range" id="icPPSlider" min="0" max="10" value="5">
+
+    <!-- Slider for controlling the position of the inner circle within the outer circle -->
+    <label for="icPosSlider">Position of Inner Circle within Outer Circle:</label>
+    <input type="range" id="icPosSlider" min="0" max="8" value="4">
+
+    <!-- Slider for controlling the x position of the pen within the inner circle -->
+    <label for="ppXSlider">Pen X Position within Inner Circle:</label>
+    <input type="range" id="ppXSlider" min="0" max="10" value="5">
+
+    <!-- Slider for controlling the y position of the pen within the inner circle -->
+    <label for="ppYSlider">Pen Y Position within Inner Circle:</label>
+    <input type="range" id="ppYSlider" min="0" max="10" value="5">
+
+    <!-- Button to trigger animation -->
+    <button id="animateButton">Animate</button>
+    <button id="stopAnimateButton">Stop Animation</button>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

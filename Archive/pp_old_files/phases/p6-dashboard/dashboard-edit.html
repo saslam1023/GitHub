@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/dash-styleview.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+
+        /*function changeImage(element)
+        {
+          var x = document.getElementById("imagefile");
+          var v = x;
+          var z = document.getElementById("imageoutput");
+         // var v = x.getAttribute("src");
+         // if(v == "feed-blue.png")
+         //   v = "feed-orange.png");
+         // else
+         //   v = "feed-blue.png");
+         alert ("alert: " +x + v + z+"")
+          z.setAttribute("src", v); 
+        }
+        */
+
+        // *** Get Date{}
+        function getDate() {
+            //  document.getElementById('date').value = new Date();
+            //  document.articleform.date.value = new Date();};
+            function formatDate(d) {
+
+                var dd = d.getDate()
+                if (dd < 10) dd = '0' + dd
+
+                var mm = d.getMonth(4) + 1
+                if (mm < 10) mm = '0' + mm
+
+                var yyyy = d.getFullYear() + 0 % 100
+                if (yyyy < 10) yyyy = '0' + yyyy
+
+                var tthh = d.getHours()
+                if (tthh < 10) tthh = '0' + tthh
+
+                var ttss = d.getMinutes()
+                if (ttss < 10) ttss = '0' + ttss
+
+                var monthNames = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"];
+
+                var mmm = monthNames[d.getMonth()]
+                return dd + ' ' + mmm + ' ' + yyyy
+            }
+
+            var d = new Date()  // 30 Jan 2011
+            //alert( formatDate(d) )  // '30.01.11'
+            document.getElementById('date').value = formatDate(d);
+
+        }
+        //. end date
+    </script>
+
+
+    <title>Welcome to: saslam1023.github.io: Dashboard</title>
+</head>
+
+<body>
+    <!-- heading -->
+
+    <main>
+        <div class="table-container">
+            <h1>Dashboard</h1>
+            <input class="datebox" type="text" id="date" name="date" readonly />
+            <script>getDate();</script>
+            <!-- form -->
+            <section class="form-wrapper">
+                <form name="articleform" action="js/process.php" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="check_submit" value="1" />
+                    <!--
+   <div class="label"><label for="date" >Date</label></div>-->
+                    <div class="label"><label for="Date"></label></div><input class="datebox" type="text" id="date"
+                        name="date" readonly />
+                    <script>getDate();</script><br /><br />
+                    <h2>Site basics</h2>
+                    <hr>
+                    <div class="flex three">
+                        <div class="label required"><label for="h1">Heading (h1)</label>
+                            <input type="text" placeholder="Heading" id="h1" name="h1" tabindex="1" max="400"
+                                autocapitalize="sentences" required /><br />
+                        </div>
+                        <div class="label required"><label for="h2">Heading (h2)</label>
+                            <input type="text" name="h2" id="h2" tabindex="2" placeholder="Heading 2"
+                                autocapitalize="sentences" required />
+                            </textarea><br />
+                        </div>
+                        <div class="label"><label for="h3">Subheading (h3)</label>
+                            <input type="text" name="h3" id="h3" tabindex="3" placeholder="Subheading"
+                                autocapitalize="sentences" />
+                            </textarea><br />
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="label"><label for="icon">Icon</label>
+                            <input type="text" name="icon" id="icon" tabindex="4" placeholder="e.g /icon.png" />
+                            </textarea><br />
+                        </div>
+                        <br />
+                        <div class="label"><label for="imagefile">Image</label>
+                            <img width="50" height="60" id="imagefile" src="#" alt="Image placeholder" />
+                            <input placeholder="e.g /placeholder.jpg" type="text" name="imagefile" tabindex="5"
+                                id="imagefile" /><br />
+                        </div>
+                        <br />
+                        <div class="label"><label for="link">Link</label>
+                            <input type="text" placeholder="Link" name="link" id="link" tabindex="8" /><br />
+                            <br />
+                        </div>
+                    </div>
+                    <h2>Site content</h2>
+                    <hr>
+                    <div class="flex">
+                        <div class="label required"><label for="content">Content</label>
+                            <textarea type="text" placeholder="Enter content text" name="content" id="content"
+                                tabindex="6" required></textarea><br />
+                        </div>
+                        <br />
+                        <div class="label"><label for="block">Block</label>
+                            <textarea type="text" placeholder="Block text" name="block" id="block"
+                                tabindex="7"></textarea><br />
+                        </div>
+                        <br />
+
+                    </div>
+                    <br />
+                    <h2>Box</h2>
+                    <hr>
+                    <div class="flex">
+                        <div class="label required"><label for="colour">Colour</label>
+                            <select id="colour" name="colour" tabindex="9" required>
+                                <option value="">None</option>
+                                <option value="pink">Pink</option>
+                                <option value="gold">Gold</option>
+                                <option value="blue">Blue</option>
+                                <option value="green">Green</option>
+                                <option value="white">White</option>
+                                <option value="black">Black</option>
+                                <option value="highlight-colour">Highlight</option>
+                            </select><br />
+
+                        </div><br />
+                        <div class="label required"><label for="status">Status</label>
+                            <select id="status" name="status" tabindex="10" required>
+                                <option value="">None</option>
+                                <option value="live">Live</option>
+                                <option value="pending">Pending</option>
+                                <option value="draft">Draft</option>
+                            </select><br />
+                            <br />
+                        </div>
+                        <div class="label required"><label for="category">Category</label>
+                            <select id="category" name="category" tabindex="11" required>
+                                <option value="">None</option>
+                                <option value="featured">Featured</option>
+                                <option value="inspo">Inspo</option>
+                                <option value="viewpoint">View point</option>
+                                <option value="project">Project</option>
+                                <option value="casestudy">Case study</option>
+                                <option value="shop">Shop</option>
+                                <option value="coding">Coding</option>
+                                <option value="general">General</option>
+                                <option value="diary">Diary</option>
+                                <option value="event">Event</option>
+                                <option value="portfolio">Portfolio</option>
+
+                            </select><br />
+                            <br />
+                        </div>
+                    </div>
+                    <h2>Owner</h2>
+                    <hr>
+                    <div class="flex">
+                        <div class="label required"><label for="contact">Author</label>
+                            <input maxlength="200" type="text" placeholder="Author" name="contact" id="contact"
+                                tabindex="12" required /><br />
+                        </div>
+
+                        <div class="label"><label for="phone">Phone number</label>
+                            <input maxlength="200" type="text" placeholder="Phone number" id="phone" name="phone"
+                                tabindex="13" /><br />
+                        </div>
+
+                        <div class="label"><label for="email">Email address</label>
+                            <input maxlength="200" type="text" placeholder="Email address " id="email" name="email"
+                                tabindex="14" /><br />
+                        </div>
+                    </div>
+                    <h2>Approve</h2>
+                    <hr>
+                    <div class="label"><label></label></div>
+                    <div class="flex">
+                        <input class="submit" type="submit" value="Update" name="Submit" tabindex="15" />
+                        <input class="clear" type="reset" value="Clear" onClick="window.location.reload()"
+                            tabindex="16">
+                    </div>
+
+                </form><br /> <br />
+            </section>
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>

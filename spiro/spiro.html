@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- this worked-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spirograph</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+
+        #controls {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Spirograph Pattern Generator</h1>
+    <canvas id="canvas" width="600" height="600"></canvas>
+    <div id="controls">
+        <label for="a">Radius of Inner Circle (a): </label>
+        <input type="range" id="a" min="10" max="200" value="100"><br>
+        <label for="b">Radius of Outer Circle (b): </label>
+        <input type="range" id="b" min="10" max="200" value="50"><br>
+        <label for="h">Distance from Pen to Inner Circle (h): </label>
+        <input type="range" id="h" min="10" max="200" value="50"><br>
+        <button onclick="drawSpirograph()">Draw</button>
+        <button onclick="animatePen()">Animate</button>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        let a = 100; // Radius of the inner circle
+        let b = 50; // Radius of the outer circle
+        let h = 50; // Distance from Pen to Inner Circle
+
+        function drawCircle(x, y, radius, color) {
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, 2 * Math.PI);
+            ctx.fillStyle = color;
+            ctx.fill();
+        }
+
+        function drawSpirograph() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw inner and outer circles
+            drawCircle(centerX, centerY, a, 'lightblue'); // Inner circle
+            drawCircle(centerX, centerY, b, 'lightgreen'); // Outer circle
+        }
+
+        function animatePen() {
+            const numPoints = 1000;
+            const period = 2 * Math.PI; // Period of the spirograph pattern
+
+            let t = 0;
+            let totalDistance = 0;
+            let prevX, prevY;
+
+            const interval = setInterval(() => {
+                const x = (a - b) * Math.cos(t) + h * Math.cos(((a - b) / b) * t) + centerX;
+                const y = (a - b) * Math.sin(t) - h * Math.sin(((a - b) / b) * t) + centerY;
+
+                drawCircle(x, y, 5, 'red');
+
+                if (prevX !== undefined && prevY !== undefined) {
+                    ctx.beginPath();
+                    ctx.moveTo(prevX, prevY);
+                    ctx.lineTo(x, y);
+                    ctx.strokeStyle = 'black';
+                    ctx.stroke();
+
+                    // Calculate distance between consecutive points
+                    totalDistance += Math.sqrt(Math.pow(x - prevX, 2) + Math.pow(y - prevY, 2));
+                }
+
+                prevX = x;
+                prevY = y;
+
+                t += 0.05;
+
+                if (totalDistance >= period) {
+                    clearInterval(interval);
+                }
+            }, 10);
+        }
+
+
+
+
+        document.getElementById('a').addEventListener('input', function () {
+            a = parseInt(this.value);
+            drawSpirograph();
+        });
+
+        document.getElementById('b').addEventListener('input', function () {
+            b = parseInt(this.value);
+            drawSpirograph();
+        });
+
+        document.getElementById('h').addEventListener('input', function () {
+            h = parseInt(this.value);
+            drawSpirograph();
+        });
+    </script>
+</body>
+
+</html>

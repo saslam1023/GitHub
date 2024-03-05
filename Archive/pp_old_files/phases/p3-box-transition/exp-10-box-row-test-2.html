@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 0px;
+        }
+
+        .expandable-box {
+            width: 100%;
+            height: 100%;
+            background-color: none;
+            border: 1px solid red;
+            cursor: pointer;
+            transition: width 1s ease-in-out, height 1s ease-in-out;
+            aspect-ratio: 1;
+        }
+
+        .expanded {
+            width: 100vw;
+            height: 100vh;
+            z-index: 3;
+            background-color: yellow;
+        }
+
+        .expanded .expandable-box:not(.expanded) {
+            display: none;
+        }
+    </style>
+    <title>working box expanding code</title>
+</head>
+
+<body>
+
+    <div class="expandable-box">1</div>
+    <div class="expandable-box">2</div>
+    <div class="expandable-box">3</div>
+    <div class="expandable-box">4</div>
+    <div class="expandable-box">5</div>
+    <div class="expandable-box">6</div>
+    <div class="expandable-box">7</div>
+    <div class="expandable-box">8</div>
+
+    <script>
+        $(document).ready(function () {
+            $(".expandable-box").click(function () {
+                // Toggle the 'expanded' class to switch between states
+                $(this).toggleClass("expanded");
+
+                // Hide other boxes when a box is fully expanded
+                $(".expandable-box").not(this).toggleClass("hidden");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

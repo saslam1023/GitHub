@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illuminated Box Example</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #222;
+            /* Set a dark background color for better visibility */
+        }
+
+        .illuminated-box {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            /* Adjust border-radius as needed for your design */
+
+            /* You can also add a gradient to enhance the effect */
+            background-image: linear-gradient(45deg, rgba(193, 220, 20, 0.2) 0%, rgba(67, 220, 20, 0.8) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="illuminated-box"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the background color of the body
+            const bodyBackgroundColor = getComputedStyle(document.body).backgroundColor;
+
+            // Set the background color of the illuminated box
+            const illuminatedBox = document.querySelector('.illuminated-box');
+            illuminatedBox.style.backgroundColor = bodyBackgroundColor;
+
+            // Set box shadow color based on the background color
+            illuminatedBox.style.boxShadow = `0 0 10px ${bodyBackgroundColor}`,
+                `0 0 20px ${bodyBackgroundColor}`,
+                `0 0 30px ${bodyBackgroundColor}`,
+                `0 0 40px ${bodyBackgroundColor}`;
+        });
+    </script>
+</body>
+
+</html>

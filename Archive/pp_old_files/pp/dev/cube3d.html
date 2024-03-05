@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>cubes Screen</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .cube {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease-out;
+            cursor: grab;
+        }
+
+        .cube .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            /* background-color: rgba(255, 0, 0, 0.5);*/
+            border: 1px solid #000;
+        }
+
+        .face1 {
+            transform: translateZ(100px);
+            background-color: rgba(255, 194, 204, 0.5)
+        }
+
+        .face2 {
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+
+        .face3 {
+            transform: rotateY(180deg) translateZ(100px);
+            background-color: rgba(171, 255, 46, 0.5)
+        }
+
+        .face4 {
+            transform: rotateY(-90deg) translateZ(100px);
+            background-color: yellow;
+        }
+
+        .face5 {
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: orange;
+        }
+
+        .face6 {
+            transform: rotateX(-90deg) translateZ(100px);
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cube" id="cube">
+        <div class="face face1"></div>
+        <div class="face face2"></div>
+        <div class="face face3"></div>
+        <div class="face face4"></div>
+        <div class="face face5"></div>
+        <div class="face face6"></div>
+    </div>
+
+    <script>
+        let isDragging = false;
+        let initialX;
+        let initialY;
+        let currentX = 0;
+        let currentY = 0;
+
+        const cube = document.getElementById('cube');
+
+        cube.addEventListener('mousedown', onMouseDown);
+        cube.addEventListener('mouseup', onMouseUp);
+        cube.addEventListener('mousemove', onMouseMove);
+        cube.addEventListener('mouseleave', onMouseLeave);
+
+        function onMouseDown(event) {
+            isDragging = true;
+            initialX = event.clientX - currentX;
+            initialY = event.clientY - currentY;
+        }
+
+        function onMouseUp() {
+            isDragging = false;
+        }
+
+        function onMouseMove(event) {
+            if (isDragging) {
+                event.preventDefault();
+                currentX = event.clientX - initialX;
+                currentY = event.clientY - initialY;
+                updateCubeTransform();
+            }
+        }
+
+        function onMouseLeave() {
+            isDragging = false;
+        }
+
+        function updateCubeTransform() {
+            cube.style.transform = `rotateX(${currentY}deg) rotateY(${currentX}deg)`;
+        }
+    </script>
+</body>
+
+</html>

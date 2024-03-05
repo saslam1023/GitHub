@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data Example</title>
+</head>
+
+<body>
+
+    <h1>Items</h1>
+
+    <ul id="itemsList"></ul>
+
+    <script>
+        // Fetch the JSON file
+        fetch('data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch JSON: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Access the 'items' array from the JSON data
+                const items = data.items;
+
+                // Get the list element to populate
+                const itemsList = document.getElementById('itemsList');
+
+                // Iterate through each item and display it
+                items.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+            <strong>Name:</strong> ${item.name}<br>
+            <strong>Description:</strong> ${item.details.description}<br>
+            <strong>Price:</strong> $${item.details.price}
+          `;
+                    itemsList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching JSON:', error.message);
+            });
+    </script>
+
+</body>
+
+</html>

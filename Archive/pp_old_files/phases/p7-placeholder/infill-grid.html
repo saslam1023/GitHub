@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            /* Adjust the number of columns as needed */
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .grid-item {
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .gray-bg {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="grid-container" class="grid-container">
+        <!-- Your initial li items go here -->
+        <li class="grid-item">Item 1</li>
+        <li class="grid-item">Item 2</li>
+        <li class="grid-item">Item 3</li>
+        <li class="grid-item">Item 4</li>
+        <li class="grid-item">Item 5</li>
+        <li class="grid-item">Item 6</li>
+        <li class="grid-item">Item 7</li>
+        <li class="grid-item">Item 8</li>
+        <li class="grid-item">Item 9</li>
+        <li class="grid-item">Item 10</li>
+        <li class="grid-item">Item 11</li>
+        <li class="grid-item">Item 12</li>
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const gridContainer = document.getElementById('grid-container');
+            const targetItemCount = 8;
+
+            // Check the current number of li elements
+            const currentItemCount = gridContainer.childElementCount;
+
+            // Calculate the remaining items needed to complete the last row
+            const remainingItems = targetItemCount - (currentItemCount % targetItemCount);
+
+            // Add placeholder li elements if needed
+            for (let i = 0; i < remainingItems; i++) {
+                const placeholderLi = document.createElement('li');
+                placeholderLi.classList.add('grid-item', 'gray-bg');
+                placeholderLi.textContent = 'Placeholder';
+                gridContainer.appendChild(placeholderLi);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

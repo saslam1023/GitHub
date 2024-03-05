@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Class Updates</title>
+    <link rel="stylesheet" href="css/dash-styleview.css"> <!-- External CSS stylesheet -->
+    <style>
+        .defaultStyle {
+            /* Define a default style if no matching class is found */
+            color: transparent;
+            font-size: 16px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    This works!
+
+    <label for="inputText">Enter Class or Value:</label>
+    <input type="text" id="inputText" oninput="updateElement(this.value)">
+
+    <br>
+
+    <div id="outputElement" class="defaultStyle box">Content will be updated here</div>
+
+    <script>
+        function updateElement(userInput) {
+            var outputElement = document.getElementById("outputElement");
+
+            // Check if the user input corresponds to a class in the external stylesheet
+            if (hasClassInStylesheet(userInput)) {
+                // Remove existing classes and add the new one
+                outputElement.className = "defaultStyle";
+                outputElement.classList.add(userInput);
+            } else {
+                // If it's not a class, set the content as plain text
+                outputElement.innerText = userInput;
+            }
+        }
+
+        function hasClassInStylesheet(className) {
+            // Check if the specified class exists in the external stylesheet
+            var styleSheets = document.styleSheets;
+            for (var i = 0; i < styleSheets.length; i++) {
+                var rules = styleSheets[i].rules || styleSheets[i].cssRules;
+                for (var j = 0; j < rules.length; j++) {
+                    if (rules[j].selectorText === "." + className) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

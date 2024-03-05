@@ -1,0 +1,8 @@
+Flask
+Flask-Login
+Flask-Mail
+Flask-Migrate
+Flask-Script
+Flask-SocketIO
+Flask-SQLAlchemy
+Flask-WTF

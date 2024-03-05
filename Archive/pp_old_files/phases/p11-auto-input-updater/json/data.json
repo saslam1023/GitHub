@@ -1,0 +1,342 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "category": "Fixed",
+            "h1": "Pixel Perfect 2",
+            "h2": "",
+            "h3": "Sharp. Clear. Distinct.",
+            "icon": "",
+            "boxlink": "",
+            "boxcontent": "",
+            "item": {
+                "heading": "Pixel Perfect",
+                "subheading": "Sharp. Clear. Distinct.",
+                "date": "",
+                "image": "images/placeholder.jpg",
+                "content": "",
+                "colour": "black",
+                "block": "Fuga sunt aspernatur ducimus quae, pariatur, tempore possimus dolores rerum excepturi libero atque quam vel aliquid dolorem optio nemo perspiciatis minima magni reprehenderit recusandae, delectus rem.",
+                "link": "#",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 2,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "white",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 3,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "pink",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 4,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "<div id='search-bar-container><h2 class='blackt left'>Search</h2><span class='material-symbols-rounded md-16 open whitet' id='clear-btn'>close</span><input type='text' id='search-bar' placeholder='?'><ul id='search-options'></ul><div id='search-results'></div>",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "green",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 5,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "blue",
+                "block": "",
+                "link": "#",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 6,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "I'm a crafter",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "<p class='material-icons-round whitet md-32 open'>help_outline</p>",
+            "item": {
+                "heading": "I'm a crafter",
+                "subheading": "Crafting is my speciality",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "gold",
+                "block": "I've always been a crafter",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 7,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "black",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 8,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "Let's talk",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "<span class='material-icons-round md-64 whitet'>perm_phone_msg</span>",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "green",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 9,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "",
+            "boxcontent": "empty",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "green",
+                "block": "",
+                "link": "#",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 10,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "Creative Design",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "<span class='material-icons-round open blackt md-32'>explore</span><br><div class='tooltip'>?<span class='tooltiptext'>Tooltip text. What does this mean?</span></div>",
+            "item": {
+                "heading": "Creative Design",
+                "subheading": "It's not all PhotoShop and Posters",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "pink",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 11,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "white",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 12,
+            "category": "Fixed",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "black",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 13,
+            "category": "",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "content": "",
+                "colour": "gold",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        }
+    ]
+}

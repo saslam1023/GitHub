@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/dash-styleview.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <title>Welcome to: saslam1023.github.io: Dashboard</title>
+</head>
+
+<body>
+    <!-- heading -->
+
+    <main>
+        <div class="table-container">
+            <h1>Dashboard</h1>
+            <input class="datebox" type="text" id="date" name="date" readonly />
+            <script>getDate();</script>
+            <!-- addition-->
+
+
+            <label for="inputText1">Input Text 1:</label>
+            <input type="text" id="inputText1" oninput="updateElement1('outputElement1', this.value)">
+
+            <br>
+
+            <label for="inputText2">Input Text 2:</label>
+            <input type="text" id="inputText2" oninput="updateElement2('outputElement2', this.value)">
+
+            <br>
+
+            <label for="textarea">Textarea:</label>
+            <textarea id="textarea" oninput="updateElement3('outputElement3', this.value)"></textarea>
+
+            <br>
+
+            <label for="select">Select:</label>
+            <select id="select" onchange="updateElement4('outputElement4', this.value)">
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+            </select>
+
+            <br>
+
+            <input type="checkbox" id="checkbox" onchange="updateElement5('outputElement5', this.checked)">
+            <label for="checkbox">Checkbox</label>
+
+            <br>
+
+            <div id="outputElement1">Content for Input Text 1 will be updated here</div>
+            <div id="outputElement2">Content for Input Text 2 will be updated here</div>
+            <div id="outputElement3">Content for Textarea will be updated here</div>
+            <div id="outputElement4">Content for Select will be updated here</div>
+            <div id="outputElement5">Content for Checkbox will be updated here</div>
+
+            <!---
+            <label for="inputText">Enter bx colour:</label>
+            <input type="text" id="inputText" oninput="updateElement(this.value)">
+
+            <br>
+
+            <div id="outputElement" class="defaultStyle ">Content will be updated here</div>
+-->
+
+            <!-- end addition-->
+            <table class="table" id="table">
+                <caption class="tr dark">
+                    Site content
+                </caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>H1</th>
+                        <th>H2</th>
+                        <th>H3</th>
+                        <th>Icon</th>
+                        <th>Heading</th>
+                        <th>Subheading</th>
+                        <th>Date</th>
+                        <th>Image</th>
+                        <th>Content</th>
+                        <th>Block</th>
+                        <th>Link</th>
+                        <th>Colour</th>
+                        <th>Status</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+            </table>
+        </div>
+    </main>
+
+    <label for="inputText1">Input Text 1:</label>
+    <input type="text" id="inputText1" oninput="updateElement1('outputElement1', this.value)">
+
+    <br>
+
+    <label for="inputText2">Input Text 2:</label>
+    <input type="text" id="inputText2" oninput="updateElement2('outputElement2', this.value)">
+
+    <br>
+
+    <label for="textarea">Textarea:</label>
+    <textarea id="textarea" oninput="updateElement3('outputElement3', this.value)"></textarea>
+
+    <br>
+
+    <label for="select">Select:</label>
+    <select id="select" onchange="updateElement4('outputElement4', this.value)">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+
+    <br>
+
+    <input type="checkbox" id="checkbox" onchange="updateElement5('outputElement5', this.checked)">
+    <label for="checkbox">Checkbox</label>
+
+    <br>
+
+    <div id="outputElement1">Content for Input Text 1 will be updated here</div>
+    <div id="outputElement2">Content for Input Text 2 will be updated here</div>
+    <div id="outputElement3">Content for Textarea will be updated here</div>
+    <div id="outputElement4">Content for Select will be updated here</div>
+    <div id="outputElement5">Content for Checkbox will be updated here</div>
+
+    <label for="inputText">Enter Class or Value:</label>
+    <input type="text" id="inputText" oninput="updateElement(this.value)">
+
+    <br>
+
+    <div id="outputElement" class="defaultStyle box">Content will be updated here</div>
+
+
+    <script>$(document).ready(function () {
+            // *** Get Date
+            function xgetDate() {
+                function formatDate(d) {
+                    var dd = d.getDate()
+                    if (dd < 10) dd = '0' + dd
+
+                    var mm = d.getMonth() + 1
+                    if (mm < 10) mm = '0' + mm
+
+                    var yyyy = d.getFullYear() + 0 % 100
+                    if (yyyy < 10) yyyy = '0' + yyyy
+
+                    var tthh = d.getHours()
+                    if (tthh < 10) tthh = '0' + tthh
+
+                    var ttss = d.getMinutes()
+                    if (ttss < 10) ttss = '0' + ttss
+
+                    var monthNames = ["January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December"];
+
+                    var mmm = monthNames[d.getMonth()]
+                    return dd + ' ' + mmm + ' ' + yyyy
+                }
+
+                var d = new Date()
+                document.getElementById('date').value = formatDate(d);
+            }
+            //. end date
+        });</script>
+    <script>
+        const hasClassInStylesheet = className => {
+            const styleSheets = Array.from(document.styleSheets);
+            return styleSheets.some(sheet =>
+                Array.from(sheet.rules || sheet.cssRules).some(rule => rule.selectorText === `.${className}`)
+            );
+        };
+
+        const updateElement = userInput => {
+            const outputElement = document.getElementById("outputElement");
+
+            outputElement.className = hasClassInStylesheet(userInput) ? `defaultStyle ${userInput}` : "defaultStyle";
+            outputElement.innerText = hasClassInStylesheet(userInput) ? "" : userInput;
+        };
+
+        const updateElement1 = (outputId, value) => {
+            document.getElementById(outputId).innerText = value;
+        };
+
+        const updateElement2 = (outputId, value) => {
+            document.getElementById(outputId).innerText = value;
+        };
+
+        const updateElement3 = (outputId, value) => {
+            document.getElementById(outputId).innerText = value;
+        };
+
+        const updateElement4 = (outputId, value) => {
+            document.getElementById(outputId).innerText = value;
+        };
+
+        const updateElement5 = (outputId, value) => {
+            document.getElementById(outputId).innerText = value;
+        };
+    </script>
+    <!---  <script src="js/view.js"></script>-> 
+
+
+</body>
+
+</html>

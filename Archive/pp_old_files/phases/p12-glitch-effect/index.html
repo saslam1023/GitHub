@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #111;
+        }
+
+        .glitch-box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: #111;
+            overflow: hidden;
+        }
+
+        .glitch-box:before,
+        .glitch-box:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .glitch-box:before {
+            background: linear-gradient(to right, #f0f, #0f0, #f00, #00f);
+            mix-blend-mode: screen;
+            animation: glitch1 1s infinite linear alternate-reverse;
+        }
+
+        .glitch-box:after {
+            background: linear-gradient(to right, #f00, #00f, #f0f, #0f0);
+            mix-blend-mode: screen;
+            animation: glitch2 1.5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch1 {
+            0% {
+                transform: translate(0);
+            }
+
+            100% {
+                transform: translate(-5px, 5px);
+            }
+        }
+
+        @keyframes glitch2 {
+            0% {
+                transform: translate(0);
+            }
+
+            100% {
+                transform: translate(5px, -5px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glitch-box"></div>
+</body>
+
+</html>

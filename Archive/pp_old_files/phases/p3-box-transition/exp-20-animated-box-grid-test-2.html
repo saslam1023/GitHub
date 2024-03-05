@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: lightblue;
+            border: 1px solid black;
+            /* top: 17%;
+            left: 50%;
+            transform: translate(-50%, -50%);*/
+        }
+
+        .inner-box {
+            /*width: 12.5%;*/
+            width: 200px;
+            height: 200px;
+            /* aspect-ratio: 1;*/
+
+            /* Dynamic width for 8 boxes in a row, minus border */
+            /* transform: translate(0%, 0%);*/
+            cursor: pointer;
+            transition: height 2s ease-in-out, width 2s ease-in-out;
+            background-color: red;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer-box {
+            width: 100vw;
+            height: 200px;
+            background-color: #3498db;
+            position: relative;
+            cursor: pointer;
+            transition: height 1s 6s ease-in-out, width 1s ease-in-out;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .outer-expanded {
+            width: 200%;
+            height: 100vh;
+            /*  transform: translate(-50%, -50%);
+            /* left: -50%;
+            /* transform: translate(-50%, -50%);*/
+
+        }
+
+        .col {
+            background-color: bisque;
+        }
+
+        .inner-expanded2 {
+            width: 50%;
+            height: 90%;
+            z-index: 5;
+            background-color: yellow;
+            font-size: 30px;
+            overflow: hidden;
+
+
+
+            /* top: 50%;
+            left: 50%;
+            transform: scaleX(2);*/
+            /*/ transform: translate(-30%, 0%);*/
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+            padding: 50px;
+
+        }
+    </style>
+    <title>working box expanding code</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="outer-box">
+            <div class="inner-box">1true</div>
+            <div class="inner-box">2</div>
+            <div class="inner-box">3<div class="hidden">This is the hidden box. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Modi debitis eligendi, praesentium ipsum magnam beatae! Assumenda sunt libero
+                    esse, accusantium recusandae eligendi modi optio error suscipit facilis nisi aut a. Corporis a
+                    aliquid eaque aliquam excepturi. Nihil asperiores dolores, maiores pariatur illo distinctio ut
+                    accusamus perspiciatis enim ab fuga dicta animi mollitia inventore voluptas tempora? Recusandae
+                    repudiandae deleniti voluptatibus? Magni, numquam dolorum labore in fugiat repellendus? Commodi
+                    ullam laborum, quaerat adipisci eius corporis. Laboriosam officia libero esse dicta perferendis rem
+                    saepe tenetur voluptas earum, nulla hic inventore reprehenderit nihil atque aliquam quidem velit,
+                    vero quae. Delectus minima tempora fugiat ullam?</div>
+            </div>
+            <div class="inner-box">4</div>
+            <div class="inner-box">5</div>
+            <div class="inner-box">6</div>
+            <div class="inner-box">7</div>
+            <div class="inner-box">8</div>
+        </div>
+        <div class="outer-box col">
+            <div class="inner-box">1true</div>
+            <div class="inner-box">2</div>
+            <div class="inner-box">3</div>
+            <div class="inner-box">4</div>
+            <div class="inner-box">5</div>
+            <div class="inner-box">6</div>
+            <div class="inner-box">7</div>
+            <div class="inner-box">8</div>
+        </div>
+
+
+    </div>
+    <!-- <div class="expandable-box">
+
+    </div>-->
+
+    <script>
+        $(document).ready(function () {
+            $(".inner-box").click(function () {
+                // Toggle the 'expanded' class to switch between states
+                $(this).toggleClass("inner-expanded2");
+                $(".outer-box").toggleClass("outer-expanded");
+                //  $(".hidden").toggleClass("visible");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

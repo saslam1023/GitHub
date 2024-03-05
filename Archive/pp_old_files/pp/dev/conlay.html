@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .content-grid-container {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-gap: 30px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .wide-item {
+            grid-column: 2 / 4;
+            grid-row: 1 / 6;
+            background-color: brown;
+            height: auto;
+            width: auto;
+            min-width: 400px;
+        }
+
+        .square-item {
+            background-color: rgb(230, 173, 213);
+            grid-column: 1;
+            grid-row: span 1;
+            width: 300px;
+            aspect-ratio: 1;
+            min-width: 150px;
+        }
+
+        .media-item {
+            background-color: rgb(128, 152, 240);
+            grid-column: 1;
+            grid-row: auto;
+            aspect-ratio: 3/2;
+        }
+
+        @media (max-width: 600px) {
+            .content-grid-container {
+                grid-template-columns: auto 1fr auto;
+                grid-template-rows: auto auto auto;
+                grid-gap: 30px;
+                width: 90%;
+                margin: 0 auto;
+
+            }
+
+            .square-item {
+                background-color: lightblue;
+                grid-column: 1 / 4;
+                grid-row: span 1;
+                width: 100%;
+                aspect-ratio: 21/9;
+            }
+
+            .wide-item {
+                background-color: rgb(227, 238, 144);
+                grid-column: 1 / 4;
+                grid-row: 2 / 3;
+                height: 600px;
+                width: 100%;
+                margin: 0;
+            }
+
+            .media-item {
+                background-color: rgb(128, 152, 240);
+                grid-column: 1 / 4;
+                grid-row: auto;
+                aspect-ratio: 21/9;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-grid-container">
+        <div class="square-item">Square</div>
+        <div class="wide-item">Wide</div>
+
+        <div class="media-item">media</div>
+        <div class="media-item">media</div>
+        <div class="media-item">media</div>
+        <div class="media-item">media</div>
+    </div>
+</body>
+
+</html>
